@@ -1,0 +1,921 @@
+﻿
+2018-05-22T13:53:29: Start analysis
+2018-05-22T13:53:29: [WARNING] Library was set explicitly - skipping path detection
+2018-05-22T13:53:29: IncludeModulesFromModulePath = win32com
+2018-05-22T13:53:30: Deleting 0 files
+2018-05-22T13:53:30: Scraping builtin modules
+2018-05-22T13:53:30: Command: D:\Project\March\TheMarchSource\TheMarchSource\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\PythonScraper.py" D:\Project\March\TheMarchSource\TheMarchSource\env\.ptvs\ "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\\"
+2018-05-22T13:53:31: Output
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\__builtin__.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_codecs.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_collections.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_functools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_heapq.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_io.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_locale.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_md5.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_random.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha256.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sha512.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_sre.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_struct.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_subprocess.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_warnings.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_weakref.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\_winreg.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\array.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\binascii.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cPickle.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cStringIO.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\cmath.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\datetime.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\errno.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\exceptions.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\future_builtins.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\gc.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\imp.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\itertools.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\marshal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\math.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\mmap.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\msvcrt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\nt.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\operator.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\signal.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\sys.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\thread.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\time.idb
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.2\CompletionDB\xxsubtype.idb
+2018-05-22T13:53:31: Scraped builtin modules
+2018-05-22T13:53:31: astropy.CallDepth = 0
+2018-05-22T13:53:31: matplotlib.CallDepth = 3
+2018-05-22T13:53:31: pandas.CallDepth = 0
+2018-05-22T13:53:31: sympy.CallDepth = 0
+2018-05-22T13:53:31: Start group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib" with 143 files
+2018-05-22T13:53:33: Parsing "abc" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\abc.py")
+2018-05-22T13:53:33: Parsing "codecs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\codecs.py")
+2018-05-22T13:53:33: Parsing "copy_reg" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\copy_reg.py")
+2018-05-22T13:53:33: Parsing "fnmatch" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\fnmatch.py")
+2018-05-22T13:53:33: Parsing "genericpath" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\genericpath.py")
+2018-05-22T13:53:33: Parsing "linecache" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\linecache.py")
+2018-05-22T13:53:33: Parsing "locale" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\locale.py")
+2018-05-22T13:53:33: Parsing "ntpath" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\ntpath.py")
+2018-05-22T13:53:33: Parsing "os" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\os.py")
+2018-05-22T13:53:33: Parsing "posixpath" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\posixpath.py")
+2018-05-22T13:53:33: Parsing "re" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\re.py")
+2018-05-22T13:53:33: Parsing "site" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site.py")
+2018-05-22T13:53:33: Parsing "sre" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\sre.py")
+2018-05-22T13:53:33: Parsing "sre_compile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\sre_compile.py")
+2018-05-22T13:53:33: Parsing "sre_constants" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\sre_constants.py")
+2018-05-22T13:53:33: Parsing "sre_parse" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\sre_parse.py")
+2018-05-22T13:53:33: Parsing "stat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\stat.py")
+2018-05-22T13:53:33: Parsing "types" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\types.py")
+2018-05-22T13:53:33: Parsing "UserDict" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\UserDict.py")
+2018-05-22T13:53:33: Parsing "warnings" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\warnings.py")
+2018-05-22T13:53:33: Parsing "_abcoll" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\_abcoll.py")
+2018-05-22T13:53:33: Parsing "_weakrefset" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\_weakrefset.py")
+2018-05-22T13:53:33: Parsing "distutils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\distutils\__init__.py")
+2018-05-22T13:53:33: Parsing "encodings.aliases" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\aliases.py")
+2018-05-22T13:53:33: Parsing "encodings.ascii" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\ascii.py")
+2018-05-22T13:53:33: Parsing "encodings.base64_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\base64_codec.py")
+2018-05-22T13:53:33: Parsing "encodings.big5" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\big5.py")
+2018-05-22T13:53:33: Parsing "encodings.big5hkscs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\big5hkscs.py")
+2018-05-22T13:53:33: Parsing "encodings.bz2_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\bz2_codec.py")
+2018-05-22T13:53:33: Parsing "encodings.charmap" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\charmap.py")
+2018-05-22T13:53:33: Parsing "encodings.cp037" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp037.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1006" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1006.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1026" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1026.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1140" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1140.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1250" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1250.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1251" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1251.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1252" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1252.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1253" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1253.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1254" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1254.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1255" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1255.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1256" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1256.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1257" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1257.py")
+2018-05-22T13:53:33: Parsing "encodings.cp1258" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp1258.py")
+2018-05-22T13:53:33: Parsing "encodings.cp424" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp424.py")
+2018-05-22T13:53:33: Parsing "encodings.cp437" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp437.py")
+2018-05-22T13:53:33: Parsing "encodings.cp500" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp500.py")
+2018-05-22T13:53:33: Parsing "encodings.cp720" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp720.py")
+2018-05-22T13:53:33: Parsing "encodings.cp737" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp737.py")
+2018-05-22T13:53:33: Parsing "encodings.cp775" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp775.py")
+2018-05-22T13:53:33: Parsing "encodings.cp850" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp850.py")
+2018-05-22T13:53:33: Parsing "encodings.cp852" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp852.py")
+2018-05-22T13:53:33: Parsing "encodings.cp855" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp855.py")
+2018-05-22T13:53:33: Parsing "encodings.cp856" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp856.py")
+2018-05-22T13:53:33: Parsing "encodings.cp857" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp857.py")
+2018-05-22T13:53:33: Parsing "encodings.cp858" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp858.py")
+2018-05-22T13:53:33: Parsing "encodings.cp860" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp860.py")
+2018-05-22T13:53:33: Parsing "encodings.cp861" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp861.py")
+2018-05-22T13:53:33: Parsing "encodings.cp862" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp862.py")
+2018-05-22T13:53:33: Parsing "encodings.cp863" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp863.py")
+2018-05-22T13:53:33: Parsing "encodings.cp864" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp864.py")
+2018-05-22T13:53:33: Parsing "encodings.cp865" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp865.py")
+2018-05-22T13:53:33: Parsing "encodings.cp866" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp866.py")
+2018-05-22T13:53:33: Parsing "encodings.cp869" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp869.py")
+2018-05-22T13:53:33: Parsing "encodings.cp874" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp874.py")
+2018-05-22T13:53:33: Parsing "encodings.cp875" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp875.py")
+2018-05-22T13:53:33: Parsing "encodings.cp932" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp932.py")
+2018-05-22T13:53:33: Parsing "encodings.cp949" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp949.py")
+2018-05-22T13:53:33: Parsing "encodings.cp950" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\cp950.py")
+2018-05-22T13:53:33: Parsing "encodings.euc_jisx0213" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\euc_jisx0213.py")
+2018-05-22T13:53:33: Parsing "encodings.euc_jis_2004" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\euc_jis_2004.py")
+2018-05-22T13:53:33: Parsing "encodings.euc_jp" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\euc_jp.py")
+2018-05-22T13:53:33: Parsing "encodings.euc_kr" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\euc_kr.py")
+2018-05-22T13:53:33: Parsing "encodings.gb18030" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\gb18030.py")
+2018-05-22T13:53:33: Parsing "encodings.gb2312" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\gb2312.py")
+2018-05-22T13:53:33: Parsing "encodings.gbk" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\gbk.py")
+2018-05-22T13:53:33: Parsing "encodings.hex_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\hex_codec.py")
+2018-05-22T13:53:33: Parsing "encodings.hp_roman8" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\hp_roman8.py")
+2018-05-22T13:53:33: Parsing "encodings.hz" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\hz.py")
+2018-05-22T13:53:33: Parsing "encodings.idna" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\idna.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp_1" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp_1.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp_2" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp_2.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp_2004" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp_2004.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp_3" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp_3.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_jp_ext" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_jp_ext.py")
+2018-05-22T13:53:33: Parsing "encodings.iso2022_kr" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso2022_kr.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_1" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_1.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_10" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_10.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_11" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_11.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_13" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_13.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_14" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_14.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_15" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_15.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_16" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_16.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_2" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_2.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_3" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_3.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_4" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_4.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_5" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_5.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_6" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_6.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_7" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_7.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_8" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_8.py")
+2018-05-22T13:53:33: Parsing "encodings.iso8859_9" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\iso8859_9.py")
+2018-05-22T13:53:33: Parsing "encodings.johab" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\johab.py")
+2018-05-22T13:53:33: Parsing "encodings.koi8_r" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\koi8_r.py")
+2018-05-22T13:53:33: Parsing "encodings.koi8_u" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\koi8_u.py")
+2018-05-22T13:53:33: Parsing "encodings.latin_1" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\latin_1.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_arabic" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_arabic.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_centeuro" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_centeuro.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_croatian" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_croatian.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_cyrillic" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_cyrillic.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_farsi" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_farsi.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_greek" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_greek.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_iceland" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_iceland.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_latin2" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_latin2.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_roman" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_roman.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_romanian" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_romanian.py")
+2018-05-22T13:53:33: Parsing "encodings.mac_turkish" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mac_turkish.py")
+2018-05-22T13:53:33: Parsing "encodings.mbcs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\mbcs.py")
+2018-05-22T13:53:33: Parsing "encodings.palmos" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\palmos.py")
+2018-05-22T13:53:33: Parsing "encodings.ptcp154" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\ptcp154.py")
+2018-05-22T13:53:33: Parsing "encodings.punycode" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\punycode.py")
+2018-05-22T13:53:33: Parsing "encodings.quopri_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\quopri_codec.py")
+2018-05-22T13:53:33: Parsing "encodings.raw_unicode_escape" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\raw_unicode_escape.py")
+2018-05-22T13:53:33: Parsing "encodings.rot_13" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\rot_13.py")
+2018-05-22T13:53:33: Parsing "encodings.shift_jis" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\shift_jis.py")
+2018-05-22T13:53:33: Parsing "encodings.shift_jisx0213" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\shift_jisx0213.py")
+2018-05-22T13:53:33: Parsing "encodings.shift_jis_2004" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\shift_jis_2004.py")
+2018-05-22T13:53:33: Parsing "encodings.string_escape" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\string_escape.py")
+2018-05-22T13:53:33: Parsing "encodings.tis_620" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\tis_620.py")
+2018-05-22T13:53:33: Parsing "encodings.undefined" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\undefined.py")
+2018-05-22T13:53:33: Parsing "encodings.unicode_escape" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\unicode_escape.py")
+2018-05-22T13:53:33: Parsing "encodings.unicode_internal" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\unicode_internal.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_16" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_16.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_16_be" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_16_be.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_16_le" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_16_le.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_32" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_32.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_32_be" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_32_be.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_32_le" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_32_le.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_7" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_7.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_8" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_8.py")
+2018-05-22T13:53:33: Parsing "encodings.utf_8_sig" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\utf_8_sig.py")
+2018-05-22T13:53:33: Parsing "encodings.uu_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\uu_codec.py")
+2018-05-22T13:53:33: Parsing "encodings.zlib_codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\zlib_codec.py")
+2018-05-22T13:53:33: Parsing "encodings" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\encodings\__init__.py")
+2018-05-22T13:53:33: Parsing complete
+2018-05-22T13:53:33: Analyzing "abc"
+2018-05-22T13:53:33: Analyzing "codecs"
+2018-05-22T13:53:33: Analyzing "copy_reg"
+2018-05-22T13:53:33: Analyzing "fnmatch"
+2018-05-22T13:53:33: Analyzing "genericpath"
+2018-05-22T13:53:33: Analyzing "linecache"
+2018-05-22T13:53:33: Analyzing "locale"
+2018-05-22T13:53:33: Analyzing "ntpath"
+2018-05-22T13:53:33: Analyzing "os"
+2018-05-22T13:53:33: Analyzing "posixpath"
+2018-05-22T13:53:33: Analyzing "re"
+2018-05-22T13:53:33: Analyzing "site"
+2018-05-22T13:53:33: Analyzing "sre"
+2018-05-22T13:53:33: Analyzing "sre_compile"
+2018-05-22T13:53:33: Analyzing "sre_constants"
+2018-05-22T13:53:33: Analyzing "sre_parse"
+2018-05-22T13:53:33: Analyzing "stat"
+2018-05-22T13:53:33: Analyzing "types"
+2018-05-22T13:53:33: Analyzing "UserDict"
+2018-05-22T13:53:33: Analyzing "warnings"
+2018-05-22T13:53:33: Analyzing "_abcoll"
+2018-05-22T13:53:33: Analyzing "_weakrefset"
+2018-05-22T13:53:33: Analyzing "distutils"
+2018-05-22T13:53:33: Analyzing "encodings.aliases"
+2018-05-22T13:53:33: Analyzing "encodings.ascii"
+2018-05-22T13:53:33: Analyzing "encodings.base64_codec"
+2018-05-22T13:53:33: Analyzing "encodings.big5"
+2018-05-22T13:53:33: Analyzing "encodings.big5hkscs"
+2018-05-22T13:53:33: Analyzing "encodings.bz2_codec"
+2018-05-22T13:53:33: Analyzing "encodings.charmap"
+2018-05-22T13:53:33: Analyzing "encodings.cp037"
+2018-05-22T13:53:33: Analyzing "encodings.cp1006"
+2018-05-22T13:53:33: Analyzing "encodings.cp1026"
+2018-05-22T13:53:33: Analyzing "encodings.cp1140"
+2018-05-22T13:53:33: Analyzing "encodings.cp1250"
+2018-05-22T13:53:33: Analyzing "encodings.cp1251"
+2018-05-22T13:53:33: Analyzing "encodings.cp1252"
+2018-05-22T13:53:33: Analyzing "encodings.cp1253"
+2018-05-22T13:53:33: Analyzing "encodings.cp1254"
+2018-05-22T13:53:33: Analyzing "encodings.cp1255"
+2018-05-22T13:53:33: Analyzing "encodings.cp1256"
+2018-05-22T13:53:33: Analyzing "encodings.cp1257"
+2018-05-22T13:53:33: Analyzing "encodings.cp1258"
+2018-05-22T13:53:33: Analyzing "encodings.cp424"
+2018-05-22T13:53:33: Analyzing "encodings.cp437"
+2018-05-22T13:53:33: Analyzing "encodings.cp500"
+2018-05-22T13:53:33: Analyzing "encodings.cp720"
+2018-05-22T13:53:33: Analyzing "encodings.cp737"
+2018-05-22T13:53:33: Analyzing "encodings.cp775"
+2018-05-22T13:53:33: Analyzing "encodings.cp850"
+2018-05-22T13:53:33: Analyzing "encodings.cp852"
+2018-05-22T13:53:33: Analyzing "encodings.cp855"
+2018-05-22T13:53:33: Analyzing "encodings.cp856"
+2018-05-22T13:53:33: Analyzing "encodings.cp857"
+2018-05-22T13:53:33: Analyzing "encodings.cp858"
+2018-05-22T13:53:33: Analyzing "encodings.cp860"
+2018-05-22T13:53:33: Analyzing "encodings.cp861"
+2018-05-22T13:53:33: Analyzing "encodings.cp862"
+2018-05-22T13:53:33: Analyzing "encodings.cp863"
+2018-05-22T13:53:33: Analyzing "encodings.cp864"
+2018-05-22T13:53:33: Analyzing "encodings.cp865"
+2018-05-22T13:53:33: Analyzing "encodings.cp866"
+2018-05-22T13:53:33: Analyzing "encodings.cp869"
+2018-05-22T13:53:33: Analyzing "encodings.cp874"
+2018-05-22T13:53:33: Analyzing "encodings.cp875"
+2018-05-22T13:53:33: Analyzing "encodings.cp932"
+2018-05-22T13:53:33: Analyzing "encodings.cp949"
+2018-05-22T13:53:33: Analyzing "encodings.cp950"
+2018-05-22T13:53:33: Analyzing "encodings.euc_jisx0213"
+2018-05-22T13:53:33: Analyzing "encodings.euc_jis_2004"
+2018-05-22T13:53:33: Analyzing "encodings.euc_jp"
+2018-05-22T13:53:33: Analyzing "encodings.euc_kr"
+2018-05-22T13:53:33: Analyzing "encodings.gb18030"
+2018-05-22T13:53:33: Analyzing "encodings.gb2312"
+2018-05-22T13:53:33: Analyzing "encodings.gbk"
+2018-05-22T13:53:33: Analyzing "encodings.hex_codec"
+2018-05-22T13:53:33: Analyzing "encodings.hp_roman8"
+2018-05-22T13:53:33: Analyzing "encodings.hz"
+2018-05-22T13:53:33: Analyzing "encodings.idna"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp_1"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp_2"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp_2004"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp_3"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_jp_ext"
+2018-05-22T13:53:33: Analyzing "encodings.iso2022_kr"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_1"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_10"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_11"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_13"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_14"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_15"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_16"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_2"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_3"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_4"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_5"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_6"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_7"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_8"
+2018-05-22T13:53:33: Analyzing "encodings.iso8859_9"
+2018-05-22T13:53:33: Analyzing "encodings.johab"
+2018-05-22T13:53:33: Analyzing "encodings.koi8_r"
+2018-05-22T13:53:33: Analyzing "encodings.koi8_u"
+2018-05-22T13:53:33: Analyzing "encodings.latin_1"
+2018-05-22T13:53:33: Analyzing "encodings.mac_arabic"
+2018-05-22T13:53:33: Analyzing "encodings.mac_centeuro"
+2018-05-22T13:53:33: Analyzing "encodings.mac_croatian"
+2018-05-22T13:53:33: Analyzing "encodings.mac_cyrillic"
+2018-05-22T13:53:33: Analyzing "encodings.mac_farsi"
+2018-05-22T13:53:33: Analyzing "encodings.mac_greek"
+2018-05-22T13:53:33: Analyzing "encodings.mac_iceland"
+2018-05-22T13:53:33: Analyzing "encodings.mac_latin2"
+2018-05-22T13:53:33: Analyzing "encodings.mac_roman"
+2018-05-22T13:53:33: Analyzing "encodings.mac_romanian"
+2018-05-22T13:53:33: Analyzing "encodings.mac_turkish"
+2018-05-22T13:53:33: Analyzing "encodings.mbcs"
+2018-05-22T13:53:33: Analyzing "encodings.palmos"
+2018-05-22T13:53:33: Analyzing "encodings.ptcp154"
+2018-05-22T13:53:33: Analyzing "encodings.punycode"
+2018-05-22T13:53:33: Analyzing "encodings.quopri_codec"
+2018-05-22T13:53:33: Analyzing "encodings.raw_unicode_escape"
+2018-05-22T13:53:33: Analyzing "encodings.rot_13"
+2018-05-22T13:53:33: Analyzing "encodings.shift_jis"
+2018-05-22T13:53:33: Analyzing "encodings.shift_jisx0213"
+2018-05-22T13:53:33: Analyzing "encodings.shift_jis_2004"
+2018-05-22T13:53:33: Analyzing "encodings.string_escape"
+2018-05-22T13:53:33: Analyzing "encodings.tis_620"
+2018-05-22T13:53:33: Analyzing "encodings.undefined"
+2018-05-22T13:53:33: Analyzing "encodings.unicode_escape"
+2018-05-22T13:53:33: Analyzing "encodings.unicode_internal"
+2018-05-22T13:53:33: Analyzing "encodings.utf_16"
+2018-05-22T13:53:33: Analyzing "encodings.utf_16_be"
+2018-05-22T13:53:33: Analyzing "encodings.utf_16_le"
+2018-05-22T13:53:33: Analyzing "encodings.utf_32"
+2018-05-22T13:53:33: Analyzing "encodings.utf_32_be"
+2018-05-22T13:53:33: Analyzing "encodings.utf_32_le"
+2018-05-22T13:53:33: Analyzing "encodings.utf_7"
+2018-05-22T13:53:33: Analyzing "encodings.utf_8"
+2018-05-22T13:53:33: Analyzing "encodings.utf_8_sig"
+2018-05-22T13:53:33: Analyzing "encodings.uu_codec"
+2018-05-22T13:53:33: Analyzing "encodings.zlib_codec"
+2018-05-22T13:53:33: Analyzing "encodings"
+2018-05-22T13:53:33: Starting analysis of 143 modules
+2018-05-22T13:53:34: Analysis complete
+2018-05-22T13:53:34: Saving group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib"
+2018-05-22T13:53:35: End of group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib"
+2018-05-22T13:53:35: Start group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages" with 1 files
+2018-05-22T13:53:36: Parsing "easy_install" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\easy_install.py")
+2018-05-22T13:53:36: Parsing complete
+2018-05-22T13:53:36: Analyzing "easy_install"
+2018-05-22T13:53:36: Starting analysis of 1 modules
+2018-05-22T13:53:36: Analysis complete
+2018-05-22T13:53:36: Saving group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages"
+2018-05-22T13:53:36: End of group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages"
+2018-05-22T13:53:36: Start group "D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip" with 282 files
+2018-05-22T13:53:38: Parsing "pip" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\__init__.py")
+2018-05-22T13:53:38: Parsing "pip.__main__" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\__main__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.basecommand" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\basecommand.py")
+2018-05-22T13:53:38: Parsing "pip._internal.baseparser" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\baseparser.py")
+2018-05-22T13:53:38: Parsing "pip._internal.build_env" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\build_env.py")
+2018-05-22T13:53:38: Parsing "pip._internal.cache" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\cache.py")
+2018-05-22T13:53:38: Parsing "pip._internal.cmdoptions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\cmdoptions.py")
+2018-05-22T13:53:38: Parsing "pip._internal.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\compat.py")
+2018-05-22T13:53:38: Parsing "pip._internal.configuration" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\configuration.py")
+2018-05-22T13:53:38: Parsing "pip._internal.download" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\download.py")
+2018-05-22T13:53:38: Parsing "pip._internal.exceptions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\exceptions.py")
+2018-05-22T13:53:38: Parsing "pip._internal.index" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\index.py")
+2018-05-22T13:53:38: Parsing "pip._internal.locations" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\locations.py")
+2018-05-22T13:53:38: Parsing "pip._internal.pep425tags" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\pep425tags.py")
+2018-05-22T13:53:38: Parsing "pip._internal.resolve" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\resolve.py")
+2018-05-22T13:53:38: Parsing "pip._internal.status_codes" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\status_codes.py")
+2018-05-22T13:53:38: Parsing "pip._internal.wheel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\wheel.py")
+2018-05-22T13:53:38: Parsing "pip._internal" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.check" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\check.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.completion" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\completion.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.configuration" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\configuration.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.download" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\download.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.freeze" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\freeze.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.hash" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\hash.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.help" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\help.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.install" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\install.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.list" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\list.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.search" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\search.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.show" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\show.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.uninstall" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\uninstall.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands.wheel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\wheel.py")
+2018-05-22T13:53:38: Parsing "pip._internal.commands" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\commands\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.models.index" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\models\index.py")
+2018-05-22T13:53:38: Parsing "pip._internal.models" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\models\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.operations.check" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\operations\check.py")
+2018-05-22T13:53:38: Parsing "pip._internal.operations.freeze" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\operations\freeze.py")
+2018-05-22T13:53:38: Parsing "pip._internal.operations.prepare" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\operations\prepare.py")
+2018-05-22T13:53:38: Parsing "pip._internal.operations" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\operations\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.req.req_file" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\req\req_file.py")
+2018-05-22T13:53:38: Parsing "pip._internal.req.req_install" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\req\req_install.py")
+2018-05-22T13:53:38: Parsing "pip._internal.req.req_set" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\req\req_set.py")
+2018-05-22T13:53:38: Parsing "pip._internal.req.req_uninstall" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\req\req_uninstall.py")
+2018-05-22T13:53:38: Parsing "pip._internal.req" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\req\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.appdirs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\appdirs.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.deprecation" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\deprecation.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.encoding" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\encoding.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.filesystem" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\filesystem.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.glibc" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\glibc.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.hashes" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\hashes.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.logging" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\logging.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.misc" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\misc.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.outdated" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\outdated.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.packaging" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\packaging.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.setuptools_build" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\setuptools_build.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.temp_dir" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\temp_dir.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.typing" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\typing.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils.ui" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\ui.py")
+2018-05-22T13:53:38: Parsing "pip._internal.utils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\utils\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._internal.vcs.bazaar" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\vcs\bazaar.py")
+2018-05-22T13:53:38: Parsing "pip._internal.vcs.git" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\vcs\git.py")
+2018-05-22T13:53:38: Parsing "pip._internal.vcs.mercurial" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\vcs\mercurial.py")
+2018-05-22T13:53:38: Parsing "pip._internal.vcs.subversion" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\vcs\subversion.py")
+2018-05-22T13:53:38: Parsing "pip._internal.vcs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_internal\vcs\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.appdirs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\appdirs.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distro" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distro.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.ipaddress" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\ipaddress.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pyparsing" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pyparsing.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.retrying" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\retrying.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.six" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\six.py")
+2018-05-22T13:53:38: Parsing "pip._vendor" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.adapter" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\adapter.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.cache" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\cache.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.controller" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\controller.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.filewrapper" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.heuristics" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\heuristics.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.serialize" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\serialize.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.wrapper" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\wrapper.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol._cmd" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\_cmd.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.caches.file_cache" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\caches\file_cache.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.caches.redis_cache" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\caches\redis_cache.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.cachecontrol.caches" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\cachecontrol\caches\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.certifi.core" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\certifi\core.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.certifi" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\certifi\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.certifi.__main__" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\certifi\__main__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.big5freq" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\big5freq.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.big5prober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\big5prober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.chardistribution" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\chardistribution.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.charsetgroupprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\charsetgroupprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.charsetprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\charsetprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.codingstatemachine" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\codingstatemachine.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.cp949prober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\cp949prober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.enums" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\enums.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.escprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\escprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.escsm" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\escsm.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.eucjpprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\eucjpprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.euckrfreq" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\euckrfreq.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.euckrprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\euckrprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.euctwfreq" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\euctwfreq.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.euctwprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\euctwprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.gb2312freq" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\gb2312freq.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.gb2312prober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\gb2312prober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.hebrewprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\hebrewprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.jisfreq" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\jisfreq.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.jpcntx" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\jpcntx.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langbulgarianmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langbulgarianmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langcyrillicmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langcyrillicmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langgreekmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langgreekmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langhebrewmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langhebrewmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langhungarianmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langhungarianmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langthaimodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langthaimodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.langturkishmodel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\langturkishmodel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.latin1prober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\latin1prober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.mbcharsetprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\mbcharsetprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.mbcsgroupprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\mbcsgroupprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.mbcssm" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\mbcssm.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.sbcharsetprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\sbcharsetprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.sbcsgroupprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\sbcsgroupprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.sjisprober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\sjisprober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.universaldetector" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\universaldetector.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.utf8prober" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\utf8prober.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.version" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\version.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.cli.chardetect" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\cli\chardetect.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.chardet.cli" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\chardet\cli\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama.ansi" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\ansi.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama.ansitowin32" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\ansitowin32.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama.initialise" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\initialise.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama.win32" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\win32.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama.winterm" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\winterm.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.colorama" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\colorama\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.database" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\database.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.index" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\index.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.locators" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\locators.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.manifest" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\manifest.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.markers" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\markers.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.metadata" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\metadata.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.resources" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\resources.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.scripts" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\scripts.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.util" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\util.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.version" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\version.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib.wheel" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\wheel.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib._backport.misc" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\_backport\misc.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib._backport.shutil" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\_backport\shutil.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib._backport.sysconfig" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\_backport\sysconfig.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib._backport.tarfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\_backport\tarfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.distlib._backport" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\distlib\_backport\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.constants" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\constants.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.html5parser" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\html5parser.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.serializer" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\serializer.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._ihatexml" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_ihatexml.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._inputstream" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_inputstream.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._tokenizer" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_tokenizer.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._utils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_utils.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.alphabeticalattributes" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\alphabeticalattributes.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.base" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\base.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.inject_meta_charset" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\inject_meta_charset.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.lint" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\lint.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.optionaltags" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\optionaltags.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.sanitizer" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\sanitizer.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters.whitespace" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\whitespace.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.filters" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\filters\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treeadapters.genshi" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treeadapters\genshi.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treeadapters.sax" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treeadapters\sax.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treeadapters" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treeadapters\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treebuilders.base" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treebuilders\base.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treebuilders.dom" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treebuilders\dom.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treebuilders.etree" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treebuilders.etree_lxml" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree_lxml.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treebuilders" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers.base" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\base.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers.dom" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\dom.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers.etree" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers.etree_lxml" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree_lxml.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers.genshi" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\genshi.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib.treewalkers" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\treewalkers\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._trie.datrie" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_trie\datrie.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._trie.py" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_trie\py.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._trie._base" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_trie\_base.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.html5lib._trie" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\html5lib\_trie\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.codec" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\codec.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.core" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\core.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.idnadata" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\idnadata.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.intranges" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\intranges.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.package_data" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\package_data.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna.uts46data" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\uts46data.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.idna" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\idna\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile.linklockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\linklockfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile.mkdirlockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\mkdirlockfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile.pidlockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\pidlockfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile.sqlitelockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\sqlitelockfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile.symlinklockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\symlinklockfile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.lockfile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\lockfile\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.msgpack.exceptions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\msgpack\exceptions.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.msgpack.fallback" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\msgpack\fallback.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.msgpack._version" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\msgpack\_version.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.msgpack" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\msgpack\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.markers" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\markers.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.requirements" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\requirements.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.specifiers" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\specifiers.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.utils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\utils.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.version" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\version.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging._compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\_compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging._structures" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\_structures.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging.__about__" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\__about__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.packaging" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\packaging\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pkg_resources.py31compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pkg_resources\py31compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pkg_resources" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.progress.bar" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\progress\bar.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.progress.counter" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\progress\counter.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.progress.helpers" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\progress\helpers.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.progress.spinner" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\progress\spinner.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.progress" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\progress\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pytoml.core" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pytoml\core.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pytoml.parser" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pytoml\parser.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pytoml.writer" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pytoml\writer.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.pytoml" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\pytoml\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.adapters" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\adapters.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.api" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\api.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.auth" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\auth.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.certs" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\certs.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.compat" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\compat.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.cookies" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\cookies.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.exceptions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\exceptions.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.help" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\help.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.hooks" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\hooks.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.models" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\models.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.packages" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\packages.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.sessions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\sessions.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.status_codes" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\status_codes.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.structures" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\structures.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.utils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\utils.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests._internal_utils" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\_internal_utils.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.requests.__version__" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\requests\__version__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.connection" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\connection.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.connectionpool" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\connectionpool.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.exceptions" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\exceptions.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.fields" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\fields.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.filepost" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\filepost.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.poolmanager" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\poolmanager.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.request" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\request.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.response" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\response.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3._collections" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\_collections.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib.appengine" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\appengine.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib.ntlmpool" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\ntlmpool.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib.pyopenssl" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\pyopenssl.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib.securetransport" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\securetransport.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib.socks" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\socks.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib._securetransport.bindings" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\bindings.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib._securetransport.low_level" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\low_level.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.contrib._securetransport" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.ordered_dict" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\ordered_dict.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.six" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\six.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.backports.makefile" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\backports\makefile.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.backports" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\backports\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.ssl_match_hostname._implementation" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\_implementation.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.packages.ssl_match_hostname" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.connection" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\connection.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.request" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\request.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.response" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\response.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.retry" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\retry.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.selectors" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\selectors.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.ssl_" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\ssl_.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.timeout" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\timeout.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.url" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\url.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util.wait" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\wait.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.urllib3.util" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\urllib3\util\__init__.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.webencodings.labels" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\webencodings\labels.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.webencodings.mklabels" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\webencodings\mklabels.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.webencodings.tests" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\webencodings\tests.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.webencodings.x_user_defined" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\webencodings\x_user_defined.py")
+2018-05-22T13:53:38: Parsing "pip._vendor.webencodings" ("D:\Project\March\TheMarchSource\TheMarchSource\env\Lib\site-packages\pip\_vendor\webencodings\__init__.py")
+2018-05-22T13:53:38: Parsing complete
+2018-05-22T13:53:38: Analyzing "pip"
+2018-05-22T13:53:38: Analyzing "pip.__main__"
+2018-05-22T13:53:38: Analyzing "pip._internal.basecommand"
+2018-05-22T13:53:38: Analyzing "pip._internal.baseparser"
+2018-05-22T13:53:38: Analyzing "pip._internal.build_env"
+2018-05-22T13:53:38: Analyzing "pip._internal.cache"
+2018-05-22T13:53:38: Analyzing "pip._internal.cmdoptions"
+2018-05-22T13:53:38: Analyzing "pip._internal.compat"
+2018-05-22T13:53:38: Analyzing "pip._internal.configuration"
+2018-05-22T13:53:38: Analyzing "pip._internal.download"
+2018-05-22T13:53:38: Analyzing "pip._internal.exceptions"
+2018-05-22T13:53:38: Analyzing "pip._internal.index"
+2018-05-22T13:53:38: Analyzing "pip._internal.locations"
+2018-05-22T13:53:38: Analyzing "pip._internal.pep425tags"
+2018-05-22T13:53:38: Analyzing "pip._internal.resolve"
+2018-05-22T13:53:38: Analyzing "pip._internal.status_codes"
+2018-05-22T13:53:38: Analyzing "pip._internal.wheel"
+2018-05-22T13:53:38: Analyzing "pip._internal"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.check"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.completion"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.configuration"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.download"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.freeze"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.hash"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.help"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.install"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.list"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.search"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.show"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.uninstall"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands.wheel"
+2018-05-22T13:53:38: Analyzing "pip._internal.commands"
+2018-05-22T13:53:38: Analyzing "pip._internal.models.index"
+2018-05-22T13:53:38: Analyzing "pip._internal.models"
+2018-05-22T13:53:38: Analyzing "pip._internal.operations.check"
+2018-05-22T13:53:38: Analyzing "pip._internal.operations.freeze"
+2018-05-22T13:53:38: Analyzing "pip._internal.operations.prepare"
+2018-05-22T13:53:38: Analyzing "pip._internal.operations"
+2018-05-22T13:53:38: Analyzing "pip._internal.req.req_file"
+2018-05-22T13:53:38: Analyzing "pip._internal.req.req_install"
+2018-05-22T13:53:38: Analyzing "pip._internal.req.req_set"
+2018-05-22T13:53:38: Analyzing "pip._internal.req.req_uninstall"
+2018-05-22T13:53:38: Analyzing "pip._internal.req"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.appdirs"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.deprecation"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.encoding"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.filesystem"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.glibc"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.hashes"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.logging"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.misc"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.outdated"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.packaging"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.setuptools_build"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.temp_dir"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.typing"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils.ui"
+2018-05-22T13:53:38: Analyzing "pip._internal.utils"
+2018-05-22T13:53:38: Analyzing "pip._internal.vcs.bazaar"
+2018-05-22T13:53:38: Analyzing "pip._internal.vcs.git"
+2018-05-22T13:53:38: Analyzing "pip._internal.vcs.mercurial"
+2018-05-22T13:53:38: Analyzing "pip._internal.vcs.subversion"
+2018-05-22T13:53:38: Analyzing "pip._internal.vcs"
+2018-05-22T13:53:38: Analyzing "pip._vendor.appdirs"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distro"
+2018-05-22T13:53:38: Analyzing "pip._vendor.ipaddress"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pyparsing"
+2018-05-22T13:53:38: Analyzing "pip._vendor.retrying"
+2018-05-22T13:53:38: Analyzing "pip._vendor.six"
+2018-05-22T13:53:38: Analyzing "pip._vendor"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.adapter"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.cache"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.controller"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.filewrapper"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.heuristics"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.serialize"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.wrapper"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol._cmd"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.caches.file_cache"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.caches.redis_cache"
+2018-05-22T13:53:38: Analyzing "pip._vendor.cachecontrol.caches"
+2018-05-22T13:53:38: Analyzing "pip._vendor.certifi.core"
+2018-05-22T13:53:38: Analyzing "pip._vendor.certifi"
+2018-05-22T13:53:38: Analyzing "pip._vendor.certifi.__main__"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.big5freq"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.big5prober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.chardistribution"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.charsetgroupprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.charsetprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.codingstatemachine"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.cp949prober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.enums"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.escprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.escsm"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.eucjpprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.euckrfreq"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.euckrprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.euctwfreq"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.euctwprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.gb2312freq"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.gb2312prober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.hebrewprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.jisfreq"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.jpcntx"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langbulgarianmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langcyrillicmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langgreekmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langhebrewmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langhungarianmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langthaimodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.langturkishmodel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.latin1prober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.mbcharsetprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.mbcsgroupprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.mbcssm"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.sbcharsetprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.sbcsgroupprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.sjisprober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.universaldetector"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.utf8prober"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.version"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.cli.chardetect"
+2018-05-22T13:53:38: Analyzing "pip._vendor.chardet.cli"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama.ansi"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama.ansitowin32"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama.initialise"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama.win32"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama.winterm"
+2018-05-22T13:53:38: Analyzing "pip._vendor.colorama"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.database"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.index"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.locators"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.manifest"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.markers"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.metadata"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.resources"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.scripts"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.util"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.version"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib.wheel"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib._backport.misc"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib._backport.shutil"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib._backport.sysconfig"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib._backport.tarfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.distlib._backport"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.constants"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.html5parser"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.serializer"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._ihatexml"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._inputstream"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._tokenizer"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._utils"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.alphabeticalattributes"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.base"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.inject_meta_charset"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.lint"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.optionaltags"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.sanitizer"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters.whitespace"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.filters"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treeadapters.genshi"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treeadapters.sax"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treeadapters"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treebuilders.base"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treebuilders.dom"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treebuilders.etree"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treebuilders.etree_lxml"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treebuilders"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers.base"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers.dom"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers.etree"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers.etree_lxml"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers.genshi"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib.treewalkers"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._trie.datrie"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._trie.py"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._trie._base"
+2018-05-22T13:53:38: Analyzing "pip._vendor.html5lib._trie"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.codec"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.core"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.idnadata"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.intranges"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.package_data"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna.uts46data"
+2018-05-22T13:53:38: Analyzing "pip._vendor.idna"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile.linklockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile.mkdirlockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile.pidlockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile.sqlitelockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile.symlinklockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.lockfile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.msgpack.exceptions"
+2018-05-22T13:53:38: Analyzing "pip._vendor.msgpack.fallback"
+2018-05-22T13:53:38: Analyzing "pip._vendor.msgpack._version"
+2018-05-22T13:53:38: Analyzing "pip._vendor.msgpack"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.markers"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.requirements"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.specifiers"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.utils"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.version"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging._compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging._structures"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging.__about__"
+2018-05-22T13:53:38: Analyzing "pip._vendor.packaging"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pkg_resources.py31compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pkg_resources"
+2018-05-22T13:53:38: Analyzing "pip._vendor.progress.bar"
+2018-05-22T13:53:38: Analyzing "pip._vendor.progress.counter"
+2018-05-22T13:53:38: Analyzing "pip._vendor.progress.helpers"
+2018-05-22T13:53:38: Analyzing "pip._vendor.progress.spinner"
+2018-05-22T13:53:38: Analyzing "pip._vendor.progress"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pytoml.core"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pytoml.parser"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pytoml.writer"
+2018-05-22T13:53:38: Analyzing "pip._vendor.pytoml"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.adapters"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.api"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.auth"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.certs"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.compat"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.cookies"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.exceptions"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.help"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.hooks"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.models"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.packages"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.sessions"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.status_codes"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.structures"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.utils"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests._internal_utils"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests"
+2018-05-22T13:53:38: Analyzing "pip._vendor.requests.__version__"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.connection"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.connectionpool"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.exceptions"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.fields"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.filepost"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.poolmanager"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.request"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.response"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3._collections"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib.appengine"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib.ntlmpool"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib.pyopenssl"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib.securetransport"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib.socks"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib._securetransport.bindings"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib._securetransport.low_level"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.contrib._securetransport"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.ordered_dict"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.six"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.backports.makefile"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.backports"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.ssl_match_hostname._implementation"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.packages.ssl_match_hostname"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.connection"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.request"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.response"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.retry"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.selectors"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.ssl_"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.timeout"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.url"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util.wait"
+2018-05-22T13:53:38: Analyzing "pip._vendor.urllib3.util"
+2018-05-22T13:53:38: Analyzing "pip._vendor.webencodings.labels"
+2018-05-22T13:53:38: Analyzing "pip._vendor.webencodings.mklabels"
+2018-05-22T13:53:38: Analyzing "pip._vendor.webencodings.tests"
+2018-05-22T13:53:38: Analyzing "pip._vendor.webencodings.x_user_defined"
+2018-05-22T13:53:38: Analyzing "pip._vendor.webencodings"
+2018-05-22T13:53:38: Starting analysis of 282 modules
