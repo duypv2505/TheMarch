@@ -1,0 +1,15 @@
+D:\Project\March\TheMarchSource\TheMarchSource\bin\Microsoft.PythonTools.WebRole.dll
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\attach_server.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\visualstudio_py_debugger.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\visualstudio_py_repl.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\visualstudio_py_util.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\__init__.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\__main__.py
+D:\Project\March\TheMarchSource\TheMarchSource\bin\AzureSetup.cfg
+D:\Project\March\TheMarchSource\TheMarchSource\bin\Microsoft.PythonTools.AzureSetup.exe
+D:\Project\March\TheMarchSource\TheMarchSource\bin\Microsoft.PythonTools.AzureSetup.exe.config
+D:\Project\March\TheMarchSource\TheMarchSource\bin\wfastcgi.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\deployment-updated-orig-prefix.txt
+D:\Project\March\TheMarchSource\TheMarchSource\ptvs_virtualenv_proxy.py
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\web.config
+D:\Project\March\TheMarchSource\TheMarchSource\obj\Debug\web.debug.config
