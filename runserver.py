@@ -8,7 +8,7 @@ from TheMarch import app
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'themarch.herokuapp.com')
     try:
-        PORT = int(environ.get('SERVER_PORT', '5555'))
+        PORT = int(environ.get('SERVER_PORT', '5000'))
     except ValueError:
-        PORT = 5555
-    app.run(host='themarch.herokuapp.com')
+        PORT = 5000
+    app.run(host='0.0.0.0', port=port, debug=True)
