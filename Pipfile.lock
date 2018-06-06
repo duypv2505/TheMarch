@@ -6,7 +6,6 @@
         "pipfile-spec": 6,
         "requires": {
             "python_version": "2.7"
-            "pymongo_sersion": "3.6.1"
         },
         "sources": [
             {
