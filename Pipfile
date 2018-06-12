@@ -2,14 +2,20 @@
 
 url = "https://pypi.python.org/simple"
 verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
 
 
 [packages]
 
-django = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+"psycopg2" = "*"
 gunicorn = "*"
-django-heroku = "*"
-
+pymongo = "*"
 
 [requires]
 
