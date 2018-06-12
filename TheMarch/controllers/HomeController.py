@@ -18,7 +18,7 @@ db = common.connect_db()
 def home():
     """Renders the home page."""
     return render_template(
-        'Admin/master.html',
+        'Home/home.html',
         title='Home Page',
         year=datetime.now().year,
     )

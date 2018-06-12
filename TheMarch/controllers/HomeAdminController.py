@@ -6,7 +6,6 @@ from flask import render_template
 from TheMarch import app
 from pymongo import MongoClient
 
-@app.route('/')
 @app.route('/admin')
 def home_admin():
     """Renders the home page."""
