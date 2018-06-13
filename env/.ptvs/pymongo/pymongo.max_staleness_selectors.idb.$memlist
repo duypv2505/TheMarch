@@ -1,8 +1,0 @@
-select
-_no_primary
-SERVER_TYPE
-_with_primary
-IDLE_WRITE_PERIOD
-ConfigurationError
-_validate_max_staleness
-SMALLEST_MAX_STALENESS
