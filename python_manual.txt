@@ -1,0 +1,38 @@
+For debug:
+if __name__ == '__main__':
+    HOST = environ.get('SERVER_HOST', 'localhost')
+    try:
+        PORT = int(environ.get('SERVER_PORT', '5555'))
+    except ValueError:
+        PORT = 5555
+    app.run(HOST, PORT)
+
+For deploy
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
+
+
+***********************************
+
+
+command 
+heroku local web -f Procfile.windows
+
+pipenv install requests
+
+
+Clone the repository from heroku
+heroku git:clone -a desolate-eyrie-83564
+cd desolate-eyrie-83564
+
+commit 
+git add .
+git commit -am "make it better"
+git push heroku master
+
+push
+heroku ps:scale web=1
+heroku open
+
+run local
+heroku local web -f Procfile.windows
