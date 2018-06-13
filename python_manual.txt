@@ -17,7 +17,8 @@ if __name__ == '__main__':
 
 command 
 heroku local web -f Procfile.windows
-
+create pip file
+pip install pipenv
 pipenv install requests
 
 
