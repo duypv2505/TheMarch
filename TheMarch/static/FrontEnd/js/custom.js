@@ -6,7 +6,7 @@
 
     // Location Address
     //-------------------------------------------------------------------------------
-    var companyName = 'Accomodation Landing Page';
+    var companyName = 'The March Coffee';
     var address = '51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh '; // Enter your Address
 
 
@@ -207,8 +207,15 @@
 
     geocoder = new google.maps.Geocoder();
 
+    var icon = {
+        url: "/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(20, 35) // anchor
+    };
+
     var mapOptions = {
-        zoom: 14,
+        zoom: 19,
         scrollwheel: false,
         draggable: draggable,
         mapTypeControl: false,
@@ -220,7 +227,7 @@
 
     var contentString = '<div id="content">' +
         '<strong>'+companyName+'</strong><br>' +
-        'Address: 3861 Sepulveda Blvd., Culver City, CA 90230 ' +
+        'Address: 51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh ' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
@@ -233,8 +240,9 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
-                icon: 'img/mapmarker.png',
-                title: 'Uluru (Ayers Rock)'
+                //icon: '/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png',
+                icon: icon,
+                title: companyName
             });
 
             google.maps.event.addListener(marker, 'click', function () {
