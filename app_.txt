@@ -1,0 +1,574 @@
+# -*- coding: utf-8 -*-
+#!flask/bin/python
+
+import os
+import sys
+import PIL
+from PIL import Image
+import simplejson
+import traceback
+import shutil
+from flask import Flask, request, render_template, redirect, url_for, send_from_directory
+from flask_bootstrap import Bootstrap
+from werkzeug import secure_filename
+
+from lib.upload_file import uploadfile
+
+############################################################################# S3Corp Duy Start
+import constants, common
+from flask import session, flash, abort
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField
+from wtforms.validators import InputRequired, Email, Length, ValidationError
+from flask_sqlalchemy  import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import timedelta
+import csv
+import time
+from pyimagesearch.colordescriptor import ColorDescriptor
+from pyimagesearch.searcher import Searcher
+import argparse
+import cv2
+import time
+import datetime
+import json
+from operator import itemgetter, attrgetter
+############################################################################# S3Corp Duy End
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['UPLOAD_FOLDER'] = 'dataset/'
+app.config['THUMBNAIL_FOLDER'] = 'data/thumbnail/'
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
+############################################################################# S3Corp Duy Start
+app.config['CSV_FOLDER'] = 'data/CSV'
+app.config['TBL_USER'] = 'data/CSV/user.csv'
+app.config['TBL_Data'] = 'data/CSV/data.csv'
+app.config['UPLOADED_PHOTOS_QUERIES'] = 'queries'
+app.config['TBL_History'] = 'data/JSON/history.json'
+app.config['host'] = '0.0.0.0'
+############################################################################# S3Corp Duy End
+
+IGNORED_FILES = set(['.gitignore'])
+bootstrap = Bootstrap(app)
+
+############################################################################# S3Corp Duy Start
+# flask-login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+#############
+# Object user
+#############
+class User(UserMixin):
+    def __init__(self,id, user_name, password):
+        self.id = id
+        self.user_name = user_name
+        self.password = password
+        self.set_password(password)
+
+    def set_password(self, password):
+        self.pw_hash = generate_password_hash(password)
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
+
+#############
+# Check input is null or not
+#############
+def input_check(form, field):
+    if len(field.data) > 0:
+        raise ValidationError("input user name".decode('utf-8'))
+
+#############
+# Delare login form
+#############
+class LoginForm(FlaskForm):
+    username = StringField('User Name'.decode('utf-8'),
+                           validators=[InputRequired(), Length(min=4, max=80)], 
+                           render_kw={"placeholder": "Tên đăng nhập".decode('utf-8')})
+    password = PasswordField('Password'.decode('utf-8'),
+                           validators=[InputRequired()], 
+                           render_kw={"placeholder": "Mật khẩu".decode('utf-8')})
+    remember = BooleanField('Ghi nhớ'.decode('utf-8'))
+
+#############
+# Delare Reset password form
+#############
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password'.decode('utf-8'),
+                           validators=[InputRequired()], 
+                           render_kw={"placeholder": "Mật khẩu hiện tại".decode('utf-8')})
+    new_password = PasswordField('Password'.decode('utf-8'),
+                        validators=[InputRequired()], 
+                        render_kw={"placeholder": "Mật khẩu mới".decode('utf-8')})
+
+#############
+# Get all user from database
+#############
+def get_user_data():
+    # Get all user in CSV file
+    common.USERS = {}
+    if os.path.exists(app.config['TBL_USER']):
+        try:
+            with open(app.config['TBL_USER'], 'r') as csvfile:        
+                    i = 1
+                    # Skips the first row of the CSV file.
+                    csvreader = csv.reader(csvfile)
+                    next(csvreader)
+                    for row in csvreader:
+                        common.USERS[i] = User(row[0], row[1], row[2])
+                        i = i + 1
+                    common.USER_NAMES = dict((u.user_name, u) for u in common.USERS.itervalues())
+        except :
+            print(sys.exc_info()[0])
+
+#############
+# Unauthorized user
+#############
+@login_manager.unauthorized_handler
+def unauthorized():            
+    message = None
+    if common.reset_msg:
+        message = common.reset_msg
+        common.reset_msg = None
+        return render_template('login.html', form = LoginForm(), reset_msg = message)
+    else:
+        return render_template('login.html', form = LoginForm())
+
+#############
+# Get detail of user
+#############
+@login_manager.user_loader
+def load_user(id):
+    return common.USERS.get(int(id))
+
+#############
+# create thumbnail file in server
+#############
+def create_thumbnail(image):
+    try:
+        base_width = 80
+        img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], image))
+        w_percent = (base_width / float(img.size[0]))
+        h_size = int((float(img.size[1]) * float(w_percent)))
+        img = img.resize((base_width, h_size), PIL.Image.ANTIALIAS)
+        img.save(os.path.join(app.config['THUMBNAIL_FOLDER'], image))
+        return True
+    except:
+        print traceback.format_exc()
+        return False
+
+############################################################################# S3Corp Duy Start
+#############
+# api get list wood
+#############
+@app.route("/upload", methods=['GET'])
+def load_wood():    
+    print('-----------------------upload GET')
+    # get all file in ./data directory
+    files = [f for f in os.listdir(app.config['UPLOAD_FOLDER']) if os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'],f)) and f not in IGNORED_FILES ]        
+    file_display = []
+    with open(app.config['TBL_Data'], "rb") as f:
+        data = list(csv.reader(f))
+    for f in files:
+        size = os.path.getsize(os.path.join(app.config['UPLOAD_FOLDER'], f))
+        for row in data:
+            if row[0] == f:                
+                file_saved = uploadfile(name=row[1], size=size,material = row[2], 
+                                    productType=row[3],category=row[4],wood_size=row[5],origin=row[6], wood_id=f)
+                file_display.append(file_saved.get_file())
+                break
+    #Sort by productType
+    file_display.sort(key=itemgetter('productType'))
+    return simplejson.dumps({"files": file_display})
+
+#############
+# api insert record wood to database
+#############
+@app.route("/upload", methods=['POST'])
+@login_required
+def upload():    
+    if request.method == 'POST':
+        files = request.files['file']        
+        result = None
+        if files:
+            filename = secure_filename(files.filename)       
+            name = request.form['name']
+            material = request.form['material']
+            productType = request.form['productType']
+            category = request.form['category']
+            size = request.form['size']
+            origin = request.form['origin']                                  
+            wood_info = common.wood_info(name,material,productType,category,size,origin, None)                                   
+            filename = common.gen_file_name(filename,app.config['UPLOAD_FOLDER'])            
+            mime_type = files.content_type            
+            if not common.allowed_file(files.filename):
+                result = uploadfile(name=wood_info.name, type=mime_type, size=0, not_allowed_msg=constants.ERR_WRONG_FORMAT_FILE.decode('utf-8'), material = wood_info.material, 
+                                    productType=wood_info.productType,category=wood_info.category,wood_size=wood_info.size,origin=wood_info.origin, wood_id=filename)
+            else:
+                # save file to disk
+                uploaded_file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)                
+                files.save(uploaded_file_path)
+                # get file size after saving
+                size = os.path.getsize(uploaded_file_path)                    
+                try:
+                    # add new record to csv file                    
+                    common.add_img_info_csv(app.config['TBL_Data'],uploaded_file_path,wood_info)                          
+                    # create thumbnail after saving
+                    if mime_type.startswith('image'):
+                        create_thumbnail(filename)                    
+                    # return json for js call back
+                    result = uploadfile(name=wood_info.name, type=mime_type, size=size, material = wood_info.material, 
+                                    productType=wood_info.productType,category=wood_info.category,wood_size=wood_info.size,origin=wood_info.origin, wood_id=filename)
+                except:              
+                    result = uploadfile(name=wood_info.name, type=mime_type, size=0, not_allowed_msg=constants.ERR_INSERT_CSV_FILE.decode('utf-8'), material = wood_info.material, 
+                                    productType=wood_info.productType,category=wood_info.category,wood_size=wood_info.size,origin=wood_info.origin, wood_id=filename)
+                    # delete upload image
+                    if os.path.exists(uploaded_file_path):
+                        os.remove(uploaded_file_path)                    
+                    # delete thumbnail image
+                    if os.path.exists(os.path.join(app.config['THUMBNAIL_FOLDER'], filename)):                        
+                        os.remove(os.path.join(app.config['THUMBNAIL_FOLDER'], filename))
+                    print(sys.exc_info()[0])                                                                  
+            return simplejson.dumps({"files": [result.get_file()]})
+
+    return redirect(url_for('index'))
+############################################################################# S3Corp Duy End
+
+#############
+# api delete wood
+#############
+@app.route("/update", methods=['POST'])
+@login_required
+def update():    
+    print('-----------------------update POST')
+    files = request.files.get('file')
+    wood_id = request.form['wood_id']
+    name = request.form['name']
+    material = request.form['material']
+    productType = request.form['productType']
+    category = request.form['category']
+    size = request.form['size']
+    origin = request.form['origin']
+    uploaded_file_path = None
+    mime_type = None
+    wood_info = common.wood_info(name,material,productType,category,size,origin,wood_id)    
+    result = None
+    try:        
+        # update record to csv file                    
+        common.update_img_info_csv(app.config['TBL_Data'],uploaded_file_path,wood_info)
+        if files:           
+            mime_type = files.content_type            
+            if not common.allowed_file(files.filename):
+                print('-----------------------allowed_file')
+                print(files.filename) 
+                result = {"wood_id" : wood_info.wood_id ,"result": "error", "message": constants.ERR_WRONG_FORMAT_FILE.decode('utf-8') }
+                return simplejson.dumps(result)
+            else:
+                # save file to disk
+                filename = secure_filename(files.filename)
+                filename = common.gen_file_name(filename,app.config['UPLOAD_FOLDER'])
+                uploaded_file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                replace_file_path = os.path.join(app.config['UPLOAD_FOLDER'], wood_id)
+                print('-----------------------uploaded_file_path')
+                print(uploaded_file_path)                   
+                files.save(uploaded_file_path)
+                print('-----------------------uploaded_file_path success')          
+                print('-----------------------replace file')
+                shutil.move(uploaded_file_path, replace_file_path)
+                print('-----------------------replace file success')    
+                # get file size after saving
+                size = os.path.getsize(replace_file_path) 
+                # create thumbnail after saving
+                if mime_type.startswith('image'):
+                    create_thumbnail(wood_id)                                   
+        # return json for js call back
+        result = {"wood_id" : wood_info.wood_id ,"result": "success", "message": "None" }
+    except:
+        result = {"wood_id" : wood_info.wood_id ,"result": "error", "message": constants.ERR_INSERT_CSV_FILE.decode('utf-8') }
+        # delete upload image
+        if uploaded_file_path != None:
+            if os.path.exists(uploaded_file_path):
+                os.remove(uploaded_file_path)                    
+            # delete thumbnail image
+            if os.path.exists(os.path.join(app.config['THUMBNAIL_FOLDER'], filename)):                        
+                os.remove(os.path.join(app.config['THUMBNAIL_FOLDER'], filename))
+        print(sys.exc_info()[0])                        
+    return simplejson.dumps(result)
+
+
+#############
+# api delete wood
+#############
+@app.route("/delete/<string:filename>", methods=['DELETE'])
+@login_required
+def delete(filename):    
+    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    file_thumb_path = os.path.join(app.config['THUMBNAIL_FOLDER'], filename)
+
+    if os.path.exists(file_path):
+        try:
+            os.remove(file_path)
+
+            if os.path.exists(file_thumb_path):
+                os.remove(file_thumb_path)
+            # delete report in csv file
+            ############################################################################# S3Corp Duy Start
+            common.delete_row_csv(filename, app.config['TBL_Data'])
+            ############################################################################# S3Corp Duy End
+            return simplejson.dumps({filename: 'True'})
+        except:
+            return simplejson.dumps({filename: 'False'})
+
+#############
+# api get thumbnail of wood (serve static files)
+#############
+@app.route("/thumbnail/<string:filename>", methods=['GET'])
+def get_thumbnail(filename):
+    return send_from_directory(app.config['THUMBNAIL_FOLDER'], filename=filename)
+
+#############
+# api get files image of wood
+#############
+@app.route("/data/<string:filename>", methods=['GET'])
+def get_file(filename):
+    return send_from_directory(os.path.join(app.config['UPLOAD_FOLDER']), filename=filename)
+
+############################################################################# S3Corp Duy Start
+#############
+# Home page
+#############
+@app.route('/')
+@login_required
+def index():   
+    return render_template('index.html', name=current_user.user_name)
+    #return render_template('index.html', name='sdsd')
+
+#############
+#Login
+#############
+@app.route('/login', methods=['POST'])
+def do_admin_login():
+    get_user_data()
+    form = LoginForm(request.form)
+    if len(common.USERS) > 0:
+        if form.validate_on_submit():
+            username = request.form["username"]
+            password = request.form["password"]
+            # Check user name     
+            if username in common.USER_NAMES:            
+                currentUser = common.USERS[int(common.USER_NAMES[username].id)]
+                # Check password
+                if currentUser.check_password(password):
+                    print("-------------------------check password success")
+                    print(password)
+                    remember = request.form.get("remember", "no") == "yes"
+                    # Excute Login
+                    if login_user(currentUser, remember=form.remember.data):
+                        session.permanent = True
+                        app.permanent_session_lifetime = timedelta(minutes=constants.SESSION_TIMEOUT)
+                        session.update(dict(user=username))
+                        return redirect(url_for('index'))
+                    # Cannot Login
+                    else:                    
+                        return render_template('login.html', form=form, errorLogin = constants.ERR_LOGIN_FAILED.decode('utf-8'))
+                # Check password failed
+                else:                
+                    return render_template('login.html', form=form , passError= constants.ERR_PASSWORD.decode('utf-8'))
+            # Check user name failed
+            else:               
+                return render_template('login.html', form=form, userError= constants.ERR_USER_NAME.decode('utf-8'))      
+    else:
+         return render_template('login.html', form=form, errorUser= constants.ERR_USER_TBL_EXIST.decode('utf-8'))     
+      
+    return render_template('login.html', form=form)
+
+#############
+#Logout
+#############
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect('/')
+
+#############
+#Change password page
+#############
+@app.route('/changepassword')
+@login_required
+def change_password():
+    return render_template('changepassword.html', form = ResetPasswordForm(), name=current_user.user_name)
+    #return render_template('changepassword.html', form = ResetPasswordForm(), name=current_user.user_name)
+
+#############
+#Reset password
+#############
+@app.route('/resetpassword', methods=['POST'])
+@login_required
+def reset_password():    
+    reset_form = ResetPasswordForm(request.form)
+    if reset_form.validate_on_submit():
+        try:
+            password = request.form["password"]
+            new_password = request.form["new_password"]
+            print("--------------------------password")
+            print(password)
+            #Check current password
+            currentUser = common.USERS[int(common.USER_NAMES[current_user.user_name].id)]
+            if currentUser.check_password(password):            
+                #Generate hash password
+                currentUser.password = generate_password_hash(new_password)
+                # Insert new password to CSV file
+                common.change_password_csv(app.config['TBL_USER'], currentUser)
+                logout_user()
+                common.reset_msg = constants.MSG_RESET_PASSWORD_SUCCESS.decode('utf-8')
+                return redirect(url_for('index'))
+            else:
+                return render_template('changepassword.html', form=reset_form , passError= constants.ERR_PASSWORD.decode('utf-8'), name=current_user.user_name)
+        except:
+            return render_template('changepassword.html', form = reset_form , error= constants.ERR_INSERT_CSV_FILE.decode('utf-8'))        
+
+#############
+#Reset password
+#############
+@app.route('/back')
+def back_to_index():    
+    return redirect(url_for('index'))
+
+############################################################################# S3Corp Duy End
+
+############################################################################# S3Corp Anh Tran Start
+@app.route("/search", methods=['GET', 'POST'])
+def search():
+    if request.method == 'POST':
+        files = request.files['file']
+        device = request.form["device"]
+
+        if files:
+            filename = secure_filename(files.filename)
+            filename = common.gen_file_name(filename,app.config['UPLOAD_FOLDER'])
+            mime_type = files.content_type
+            if not device:
+                device = ""
+
+
+            if not common.allowed_file(files.filename):
+                result = uploadfile(name=filename, type=mime_type, size=0, not_allowed_msg="File type not allowed")
+                return result
+            else:
+                # save file to disk
+                uploaded_file_path = os.path.join(app.config['UPLOADED_PHOTOS_QUERIES'], filename)
+                files.save(uploaded_file_path)
+
+                # get file size after saving
+                size = os.path.getsize(uploaded_file_path)
+
+                # return json for js call back
+                #result = uploadfile(name=filename, type=mime_type, size=size)
+
+                 # initialize the image descriptor
+                cd = ColorDescriptor((8, 12, 3))
+
+                # # load the query image and describe it
+                # imageWithPatch = app.config['UPLOADED_PHOTOS_QUERIES'] + '/' + filename 
+                query = cv2.imread(uploaded_file_path)
+                if query is None : 
+                    print("can't read image:",uploaded_file_path)
+                    return simplejson.dumps([])
+
+                features = cd.describe(query)
+
+                # # perform the search
+                if not os.path.exists(app.config['TBL_Data']):
+                    return simplejson.dumps([])
+
+                searcher = Searcher(app.config['TBL_Data'])
+                results = searcher.search(features)
+
+                #save search date
+                currentTime = time.time()
+                timeString = datetime.datetime.fromtimestamp(currentTime).strftime('%d-%m-%Y %H:%M')
+
+                # Prepare to save history
+                historyTitle = ""
+                if len(results) > 0:
+                    firstItem = results[0]
+                    historyTitle = firstItem['productID'] + "..."
+
+                histotyJsonFilePath = app.config['TBL_History']
+                resultJsonString = simplejson.dumps(results)
+                data = {}
+                currentHistoryItem = {"fileName":filename, "imageURL": filename, "historyTitle":historyTitle, "date":currentTime, "dateString":timeString, "results":results}
+                historyArray = [currentHistoryItem]
+                data[device] = historyArray
+
+                if os.path.exists(histotyJsonFilePath):
+                    print "history file is exist"
+
+                    # Reading data back
+                    with open(histotyJsonFilePath, 'r') as infile:
+                        data = json.load(infile)
+                        json_str = json.dumps(data)
+
+                        print "history data "+json_str
+
+                        if device in data:
+                            historyArray = data[device]
+                            historyArray.append(currentHistoryItem)
+                            # data[device] = historyArray
+                            print "update history array"
+                        else:
+                            data[device] = historyArray
+                
+                with open(histotyJsonFilePath, 'w') as outfile:
+                    json.dump(data, outfile)
+
+                return resultJsonString #simplejson.dumps({"results": results})
+            
+            # return simplejson.dumps({"files": [result.get_file()]})
+
+    if request.method == 'GET':
+        # get all file in ./data directory
+        files = [f for f in os.listdir(app.config['UPLOADED_PHOTOS_QUERIES']) if os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'],f)) and f not in IGNORED_FILES ]
+        
+        file_display = []
+
+        for f in files:
+            size = os.path.getsize(os.path.join(app.config['UPLOADED_PHOTOS_QUERIES'], f))
+            file_saved = uploadfile(name=f, size=size)
+            file_display.append(file_saved.get_file())
+
+        return simplejson.dumps({"files": file_display})
+
+    return redirect(url_for('index'))
+
+
+@app.route("/history/<string:device>", methods=['GET'])
+def getHistory(device):
+    histotyJsonFilePath = app.config['TBL_History']
+    data = {}
+    historyArray = []
+
+    if os.path.exists(histotyJsonFilePath):
+        print "history file is exist"
+        # Reading data back
+        with open(histotyJsonFilePath, 'r') as infile:
+            data = json.load(infile)
+            # json_str = json.dumps(data)
+            if device in data:
+                historyArray = data[device]
+    resultJsonString = simplejson.dumps(historyArray)
+
+    return resultJsonString   
+
+@app.route("/scanImage/<string:filename>", methods=['GET'])
+def get_scanfile(filename):
+    return send_from_directory(os.path.join(app.config['UPLOADED_PHOTOS_QUERIES']), filename=filename)
+
+############################################################################# S3Corp Anh Tran End
+
+if __name__ == '__main__':
+    app.run(debug=True)
