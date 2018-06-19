@@ -2297,6 +2297,7 @@
     <Content Include="TheMarch\static\scripts\respond.min.js" />
     <Content Include="TheMarch\static\scripts\_references.js" />
     <Content Include="TheMarch\templates\about.html" />
+    <Content Include="TheMarch\templates\Admin\login.html" />
     <Content Include="TheMarch\templates\Admin\master.html" />
     <Content Include="TheMarch\templates\contact.html" />
     <Content Include="TheMarch\templates\Home\home.html" />

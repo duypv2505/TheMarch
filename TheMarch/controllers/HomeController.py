@@ -8,7 +8,7 @@ from TheMarch import app
 from pymongo import MongoClient
 import TheMarch.common as common
 
-db = common.connect_db()
+#db = common.connect_db()
 #result = db.User.find()
 #for item in result:
 #    print("Name: " + item["name"] + "email: " + str(item["email"]))
