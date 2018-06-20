@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% block title %}File Uploader{% endblock %}
+
+{% block page_content %}
+<div class="container" style="margin-top: 120px;">
+    <div class="header">
+        <h1>Quản lí hệ thống các mẫu gỗ</h1>
+        <br>
+    </div>
+    <!-- The file upload form used as target for the file upload widget -->
+    <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+        <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
+        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row fileupload-buttonbar">
+            <div class="col-lg-7">
+                <!-- The fileinput-button span is used to style the file input field as button -->
+                <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Thêm</span>
+                    <input type="file" name="file" multiple>
+                </span>
+                <button type="submit" class="btn btn-primary start" style="display:none">
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Tải lên</span>
+                </button>
+                <button type="reset" class="btn btn-warning cancel" style="display:none">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Hủy bỏ</span>
+                </button>
+                <button type="button" class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Xóa</span>
+                </button>
+                <input type="checkbox" class="toggle">
+                <!-- The global file processing state -->
+                <span class="fileupload-process"></span>
+            </div>
+            <!-- The global progress state -->
+            <div class="col-lg-5 fileupload-progress fade">
+                <!-- The global progress bar -->
+                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                </div>
+                <!-- The extended global progress state -->
+                <div class="progress-extended">&nbsp;</div>
+            </div>
+        </div>
+        <table id="header-fixed" style="top: 250px;position: fixed;z-index:999">
+            <thead>
+                <tr style="height: 50px;background-color: #fff; width: 100%;">
+                    <th style="width:8%"></th>
+                    <th style="width:13%">Mã sản phẩm</th>
+                    <th style="width:13%">Chất liệu</th>
+                    <th style="width:13%">Loại sản phẩm</th>
+                    <th style="width:13%">Danh mục</th>
+                    <th style="width:13%">Kích thước</th>
+                    <th style="width:13%">Xuất xứ</th>
+                    <th style="width:15%"></th>
+                </tr>
+            </thead>
+        </table>
+        <!-- The table listing the files available for upload/download -->
+        <table role="presentation" class="table table-striped" id="main_table">
+            <!--<thead>
+                <tr>
+                    <th></th>
+                    <th>Mã sản phẩm</th>
+                    <th>Chất liệu</th>
+                    <th>Loại sản phẩm</th>
+                    <th>Danh mục</th>
+                    <th>Kích thước</th>
+                    <th>Xuất xứ</th>
+                    <th></th>
+                </tr>
+            </thead>-->
+            <tbody class="files"></tbody>
+        </table>
+        <!-- Modal -->
+        <!--<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Modal header</h3>
+            </div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary">Save changes</button>
+            </div>
+        </div>-->
+    </form>
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Notes</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>The maximum file size for uploads in this demo is <strong>50 MB</strong> (default file size is unlimited).</li>
+                <li>Only image files (<strong>JPG, PNG, BMP</strong>) are allowed in this website.</li>
+                <li>You can <strong>drag &amp; drop</strong> files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- The blueimp Gallery widget -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+{% raw %}
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td style="width:8%">
+            <span class="preview"></span>
+            <input class="id" type="hidden" name="id" value="{%=file.name%}" maxlength="100">
+        </td>
+        <td style="width:13%">
+            <input class="input-update" placeholder="Mã sản phẩm" name="name" type="text" value="{%=file.name%}" maxlength="100">
+        </td>
+        <td style="width:13%">
+            <input class="input-update" placeholder="Chất liệu" name="material" type="text" maxlength="100">
+        </td>
+        <td style="width:13%">
+            <input class="input-update" placeholder="Loại sản phẩm" name="productType" type="text" maxlength="100">
+        </td>
+        <td style="width:13%">
+            <input class="input-update" placeholder="Danh mục" name="category" type="text" maxlength="100">
+        </td>
+        <td style="width:13%">
+            <input class="input-update" placeholder="Kích thước" name="size" type="text" maxlength="100">
+        </td>
+        <td style="width:15%">
+            <!--<p class="size">Processing...</p>-->
+            <input class="input-update" placeholder="Xuất xứ" name="origin" type="text" maxlength="100">
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+            </div>
+        </td>
+        <td style="width:12%">
+            {% if (!i && !o.options.autoUpload) { %}
+            <button class="btn btn-primary start" disabled style="margin-bottom:2px;">
+                <i class="glyphicon glyphicon-upload"></i>
+                <span>Tải lên</span>
+            </button>
+            {% } %}
+            {% if (!i) { %}
+            <button class="btn btn-warning cancel">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+                <span>Hủy tải</span>
+            </button>
+            {% } %}
+        </td>
+    </tr>
+    {% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="width:8%">
+            <span class="preview">
+                {% if (file.thumbnailUrl) { %}
+                <a class="img-wrapper" href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+                    <img url="{%=file.thumbnailUrl%}" src="{%=file.thumbnailUrl%}">
+                </a>
+                {% } %}
+                <input class="id" type="hidden" name="id" value="{%=file.wood_id%}" maxlength="32">
+            </span>
+        </td>
+        <td style="width:13%">
+            <p class="name">
+                {% if (file.url) { %}
+                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                {% } else { %}
+                <span>{%=file.name%}</span>
+                {% } %}
+            </p>
+            {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+            {% } %}
+        </td>
+        <td style="width:13%">
+            <span class="material">{%=file.material%}</span>
+        </td>
+        <td style="width:13%">
+            <span class="productType">{%=file.productType%}</span>
+        </td>
+        <td style="width:13%">
+            <span class="category">{%=file.category%}</span>
+        </td>
+        <td style="width:13%">
+            <span class="wood_size">{%=file.wood_size%}</span>
+        </td>
+        <td style="width:12%">
+            <span class="origin">{%=file.origin%}</span>
+        </td>
+        <td style="width:16%">
+            {% if (file.deleteUrl) { %}
+            <button type="button" class="btn btn-primary startUpdate" style="width: 56%;display:none; margin-bottom:2px;">
+                <i class="glyphicon glyphicon-upload"></i>
+                <span>Tải lên</span>
+            </button>
+            <button type="button" class="btn btn-warning cancelUpdate" style="width: 56%;display:none">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+                <span>Hủy bỏ</span>
+            </button>
+            <button type="button" class="btn btn-warning update" tag="update" style="width: 42%;background-color:#de3de8;border-color:#de3de8; margin-bottom:2px;padding: 6px 0px;">
+                <i class="glyphicon glyphicon-pencil"></i>
+                <span>Sửa</span>
+            </button>
+            <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" style="width: 42%;padding: 6px 0px;" data-url="{%=file.deleteUrl%}" {% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
+                <i class="glyphicon glyphicon-trash"></i>
+                <span>Xóa</span>
+            </button>
+            <input type="checkbox" name="delete" value="1" class="toggle">
+            {% } else { %}
+            <button class="btn btn-warning cancel">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+                <span>Hủy</span>
+            </button>
+            {% } %}
+        </td>
+    </tr>
+    {% } %}
+</script>
+{% endraw %}
+{% endblock %}
