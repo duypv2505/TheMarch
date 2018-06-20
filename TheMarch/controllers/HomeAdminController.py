@@ -62,8 +62,8 @@ class LoginForm(FlaskForm):
 def home_admin():
     """Renders the home page."""
     return render_template(
-        'Admin/master.html',
-        title='Admin Page',
+        'Admin/Coffee.html',
+        title='Coffee admin page',
         year=datetime.now().year,
     )
 
@@ -80,14 +80,15 @@ def load_user(user_id):
 # Unauthorized user
 #############
 @login_manager.unauthorized_handler
-def unauthorized():            
-    message = None
-    if common.reset_msg:
-        message = common.reset_msg
-        common.reset_msg = None
-        return render_template('Admin/login.html', form = LoginForm(), reset_msg = message)
-    else:
-        return render_template('Admin/login.html', form = LoginForm())
+def unauthorized():        
+    return render_template('Admin/login.html', form = LoginForm())    
+    #message = None
+    #if common.reset_msg:
+    #    message = common.reset_msg
+    #    common.reset_msg = None
+    #    return render_template('Admin/login.html', form = LoginForm(), reset_msg = message)
+    #else:
+    #    return render_template('Admin/login.html', form = LoginForm())
 
 #############
 #Login 

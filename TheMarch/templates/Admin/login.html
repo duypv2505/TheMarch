@@ -15,10 +15,8 @@
 {% block content %}
 <div class="container">
     <form class="form-signin" method="POST" action="/login">
-        <img src="../static/img/welcome.png" style="inline-size: -webkit-fill-available; " class="img-responsive" />
-        <!--<h2 class="form-signin-heading">Login</h2>-->
-        <div style="margin-top: 10%;">
-            asasa
+        <h2 class="form-signin-heading">Login</h2>
+        <div style="margin-top: 10%;">            
             {{ form.hidden_tag() }}
             {% if reset_msg %}
             <p style="color: #a94442 !important" class="help-block">{{ reset_msg }}</p>
