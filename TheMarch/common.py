@@ -1,6 +1,9 @@
 from pymongo import MongoClient
 import os
+from TheMarch import app
+
 current_db = []
+IGNORED_FILES = set(['.gitignore'])
 
 class banner_info:
   def __init__(self,name , url):
@@ -29,3 +32,13 @@ def gen_file_name(filename, path):
         i += 1
 
     return filename
+
+def load_banner_image():
+    files = [f for f in os.listdir('TheMarch/' + app.config['BANNER_IMAGE_FOLDER']) if os.path.isfile(os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'],f)) and f not in IGNORED_FILES ]        
+    file_display = []
+    for f in files:        
+        #baner_url = os.path.join(app.config['BANNER_IMAGE_FOLDER'], f)
+        baner_url = "load_banner_image/%s" % f
+        banner_saved = banner_info(f, baner_url)             
+        file_display.append(banner_saved)
+    return file_display

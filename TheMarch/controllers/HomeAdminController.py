@@ -151,15 +151,41 @@ def do_admin_login():
 def upload_banner():    
     files = request.files['file']
     if files:          
-        filename = secure_filename(files.filename)
-        filename = common.gen_file_name(filename,app.config['BANNER_IMAGE_FOLDER'])   
-        #banner_number = request.form['number']
+        file_name = secure_filename(files.filename)
+        file_name = common.gen_file_name(file_name,'TheMarch/' + app.config['BANNER_IMAGE_FOLDER'])   
+        banner_number = request.form['number']
+        if banner_number > 0:
+            #Delete old banner
+            old_file_name = request.form['file_name']
+            old_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)
+            if os.path.exists(old_file_path):
+                os.remove(old_file_path)
+            file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)            
+            file_name = file_name.replace(os.path.splitext(file_name)[0], 'banner_' + banner_number)
+            #filename = 'banner_' + banner_number
         # save file to disk
-        uploaded_file_path = os.path.join(app.config['BANNER_IMAGE_FOLDER'], filename)
+        uploaded_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)
         files.save(uploaded_file_path)
         # get file size after saving
         size = os.path.getsize(uploaded_file_path)
-    return simplejson.dumps({"files_name": filename})
+    return simplejson.dumps({"files_name": file_name, "banner_number": banner_number})    
+
+
+#############
+# Delete banner
+#############
+@app.route("/delete_banner", methods=['DELETE'])
+#@login_required
+def delete_banner():   
+    row_index = request.form['row_index'] 
+    file_name = request.form['file_name'] 
+    file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)
+    if os.path.exists(file_path):
+        try:
+            os.remove(file_path)
+            return simplejson.dumps({result: 'success', row_index: row_index})
+        except:
+            return simplejson.dumps({result: 'error'})
 
 #############
 # Banner controller
@@ -167,19 +193,10 @@ def upload_banner():
 @app.route("/banner", methods=['GET'])
 #@login_required
 def banner():    
-    list_banner = load_banner_admin()
+    list_banner = common.load_banner_image()
     return render_template(
         'Admin/banner.html',
         title='Banner manager page',
         banner_data = list_banner,
         year=datetime.now().year,
     )
-
-def load_banner_admin():
-    files = [f for f in os.listdir(app.config['BANNER_IMAGE_FOLDER']) if os.path.isfile(os.path.join(app.config['BANNER_IMAGE_FOLDER'],f)) and f not in IGNORED_FILES ]        
-    file_display = []
-    for f in files:        
-        baner_url = os.path.join(app.config['BANNER_IMAGE_FOLDER'], f)
-        banner_saved = common.banner_info(f, baner_url)             
-        file_display.append(banner_saved)
-    return file_display

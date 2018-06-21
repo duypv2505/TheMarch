@@ -17,12 +17,12 @@ from operator import itemgetter, attrgetter
 #result = db.User.find()
 #for item in result:
 #    print("Name: " + item["name"] + "email: " + str(item["email"]))
-IGNORED_FILES = set(['.gitignore'])
+
 
 @app.route('/')
 @app.route('/home')
 def home():
-    list_banner = load_banner()
+    list_banner = common.load_banner_image()
     """Renders the home page."""
     return render_template(
         'Home/home.html',
@@ -51,22 +51,8 @@ def about():
         message='Your application description page.'
     )
 
-#############
-# Load banner
-#############
-@app.route("/load_banner", methods=['POST'])
-def load_banner():
-    files = [f for f in os.listdir(app.config['BANNER_IMAGE_FOLDER']) if os.path.isfile(os.path.join(app.config['BANNER_IMAGE_FOLDER'],f)) and f not in IGNORED_FILES ]        
-    file_display = []
-    for f in files:        
-        baner_url = os.path.join(app.config['BANNER_IMAGE_FOLDER'], f)
-        banner_saved = common.banner_info(f, baner_url)             
-        file_display.append(banner_saved)
-    #Sort by productType
-    #file_display.sort(key=itemgetter('name'))
-    #return json.dumps([ob.__dict__ for ob in file_display])
-    return file_display
-
-@app.route('/load_banner_image/<path:filename>')
+#@app.route("/thumbnail/<string:filename>", methods=['GET'])
+@app.route('/load_banner_image/<string:filename>', methods=['GET'])
 def load_banner_image(filename):
     return send_from_directory(app.config['BANNER_IMAGE_FOLDER'], filename=filename)
+    #return send_from_directory(os.path.join(app.config['BANNER_IMAGE_FOLDER']), filename=filename)
