@@ -196,7 +196,19 @@ def banner():
     list_banner = common.load_banner_image()
     return render_template(
         'Admin/banner.html',
-        title='Banner manager page',
         banner_data = list_banner,
+        year=datetime.now().year,
+    )
+
+#############
+# Event controller
+#############
+@app.route("/event", methods=['GET'])
+#@login_required
+def event():    
+    #list_banner = common.load_banner_image()
+    return render_template(
+        'Admin/event.html',
+        #banner_data = list_banner,
         year=datetime.now().year,
     )

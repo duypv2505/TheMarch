@@ -1,45 +1,53 @@
 ﻿{% extends "Admin/master.html" %}
+{% block title %}Banner manager{% endblock %}
 {% block page_content %}
-<div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Quản lí hình banner</h3>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Quản lí hình banner</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <form id="upload_banner" method="post" enctype="multipart/form-data">
+                    <table id="banner_table" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th width="6%"></th>
+                                <th width="20%">Hình banner</th>
+                                <th width="56%">Tên banner</th>
+                                <th width="7%"></th>
+                                <th width="7%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for sub in banner_data %}
+                            <tr>
+                                <td>{{loop.index}}</td>
+                                <td><img style="max-width: 50%;" src="{{sub.url}}" alt="The Sea Villa"></td>
+                                <td>{{ sub.name }}</td>
+                                <td>
+                                    <input type="file" class="file" style="display:none" />
+                                    <input onclick="openfile(this)" class="btn btn-primary btn-update" type="button" value="Thay đổi">
+                                    <input style="margin-top: 2%;display:none" onclick="upload_banner(this)" class="btn btn-primary btn-save" type="button" value="Lưu">
+                                    <input style="margin-top: 2%;display:none" onclick="cancel_update(this)" class="btn btn-primary btn-cancel" type="button" value="Hủy">
+                                </td>
+                                <td>
+                                    <input class="btn btn-danger" onclick="delete_banner(this)" type="button" value="Xóa">
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
     </div>
-    <!-- /.card-header -->
-    <div class="card-body">
-        <form id="upload_banner" method="post" enctype="multipart/form-data">
-            <table id="banner_table" class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th width="6%"></th>
-                        <th width="20%">Hình banner</th>
-                        <th width="56%">Tên banner</th>
-                        <th width="7%"></th>
-                        <th width="7%"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for sub in banner_data %}
-                    <tr>
-                        <td>{{loop.index}}</td>
-                        <td><img style="max-width: 50%;" src="{{sub.url}}" alt="The Sea Villa"></td>
-                        <td>{{ sub.name }}</td>
-                        <td>
-                            <input type="file" class="file" style="display:none" />                  
-                            <input onclick="openfile(this)" class="btn btn-primary btn-update" type="button" value="Thay đổi">
-                            <input style="margin-top: 2%;display:none" onclick="upload_banner(this)" class="btn btn-primary btn-save" type="button" value="Lưu">
-                            <input style="margin-top: 2%;display:none" onclick="cancel_update(this)" class="btn btn-primary btn-cancel" type="button" value="Hủy">
-                        </td>
-                        <td>
-                            <!--<button class="btn btn-danger">Xóa</button>-->
-                            <input class="btn btn-danger" onclick="delete_banner(this)" type="button" value="Xóa">
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </form>
-    </div>
-    <!-- /.card-body -->
 </div>
-<!-- /.card -->
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="/static/banner.js" charset="UTF-8"></script>
 {% endblock %}
