@@ -1316,6 +1316,7 @@
     <Content Include="TheMarch\static\content\bootstrap.css" />
     <Content Include="TheMarch\static\content\bootstrap.min.css" />
     <Content Include="TheMarch\static\content\site.css" />
+    <Content Include="TheMarch\static\css\custom.css" />
     <Content Include="TheMarch\static\css\login.css" />
     <Content Include="TheMarch\static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="TheMarch\static\fonts\glyphicons-halflings-regular.svg" />
@@ -2284,6 +2285,9 @@
     <Content Include="TheMarch\static\FrontEnd\img\youtube-preview.jpg" />
     <Content Include="TheMarch\static\FrontEnd\js\.DS_Store" />
     <Content Include="TheMarch\static\FrontEnd\js\custom.js" />
+    <Content Include="TheMarch\static\main.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="TheMarch\static\scripts\bootstrap.js" />
     <Content Include="TheMarch\static\scripts\bootstrap.min.js" />
     <Content Include="TheMarch\static\scripts\jquery-1.10.2.intellisense.js" />
@@ -2300,6 +2304,7 @@
     <Content Include="TheMarch\static\scripts\respond.min.js" />
     <Content Include="TheMarch\static\scripts\_references.js" />
     <Content Include="TheMarch\templates\about.html" />
+    <Content Include="TheMarch\templates\Admin\banner.html" />
     <Content Include="TheMarch\templates\Admin\Coffee.html" />
     <Content Include="TheMarch\templates\Admin\login.html" />
     <Content Include="TheMarch\templates\Admin\master.html" />

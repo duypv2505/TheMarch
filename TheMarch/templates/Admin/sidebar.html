@@ -22,6 +22,12 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
+                    <a href="{{ url_for('banner') }}" class="nav-link">
+                        <i class="nav-icon fa fa-file"></i>
+                        <p>Quản lí hình banner</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="nav-icon fa fa-file"></i>
                         <p>Quản lí sự kiện</p>
@@ -43,6 +49,12 @@
                     <a href="" class="nav-link">
                         <i class="nav-icon fa fa-file"></i>
                         <p>Quản lí phòng tập</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('home') }}" class="nav-link">
+                        <i class="nav-icon fa fa-file"></i>
+                        <p>Quay lại trang chủ</p>
                     </a>
                 </li>
             </ul>

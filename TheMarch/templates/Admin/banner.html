@@ -1,0 +1,44 @@
+﻿{% extends "Admin/master.html" %}
+{% block page_content %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Quản lí hình banner</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <form id="upload_banner" method="post" enctype="multipart/form-data">
+            <table id="banner_table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th width="6%"></th>
+                        <th width="20%">Hình banner</th>
+                        <th width="53%">Tên banner</th>
+                        <th width="10%"></th>
+                        <th width="7%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sub in banner_data %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td><img style="max-width: 50%;" src="load_banner_image/{{sub.name}}" alt="The Sea Villa"></td>
+                        <td>{{ sub.name }}</td>
+                        <td>
+                            <input type="file" class="file" style="display:none" />
+                            <!--<button onclick="openfile(this)" class="btn btn-primary">Thay đổi</button>-->
+                            <input onclick="openfile(this)" class="btn btn-primary" type="button" value="Thay đổi">
+                        </td>
+                        <td>
+                            <!--<button class="btn btn-danger">Xóa</button>-->
+                            <input class="btn btn-danger" type="button" value="Xóa">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+{% endblock %}

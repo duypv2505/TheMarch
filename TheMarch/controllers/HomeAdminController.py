@@ -14,13 +14,25 @@ from wtforms.validators import InputRequired, Email, Length, ValidationError
 from bson.objectid import ObjectId
 from flask_wtf import FlaskForm
 from flask_bootstrap import Bootstrap
-
+from werkzeug import secure_filename
+import os
+import simplejson
+import json
 from datetime import timedelta
+from operator import itemgetter, attrgetter
 
 import TheMarch.common as common
 
 bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['BANNER_IMAGE_FOLDER'] = 'dataset/banner/'
+app.config['COFFEE_IMAGE_FOLDER'] = 'dataset/coffee/'
+app.config['EVENT_IMAGE_FOLDER'] = 'dataset/event/'
+app.config['BAND_IMAGE_FOLDER'] = 'dataset/band/'
+app.config['GYM_IMAGE_FOLDER'] = 'dataset/gym/'
+IGNORED_FILES = set(['.gitignore'])
+
 # flask-login
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -131,4 +143,43 @@ def do_admin_login():
         return render_template('login.html', form=form, userError= constants.ERR_USER_NAME.decode('utf-8'))
     return render_template('login.html', form=form)
     
-    
+#############
+# Upload banner
+#############
+@app.route("/upload_banner", methods=['POST'])
+#@login_required
+def upload_banner():    
+    files = request.files['file']
+    if files:          
+        filename = secure_filename(files.filename)
+        filename = common.gen_file_name(filename,app.config['BANNER_IMAGE_FOLDER'])   
+        #banner_number = request.form['number']
+        # save file to disk
+        uploaded_file_path = os.path.join(app.config['BANNER_IMAGE_FOLDER'], filename)
+        files.save(uploaded_file_path)
+        # get file size after saving
+        size = os.path.getsize(uploaded_file_path)
+    return simplejson.dumps({"files_name": filename})
+
+#############
+# Banner controller
+#############
+@app.route("/banner", methods=['GET'])
+#@login_required
+def banner():    
+    list_banner = load_banner_admin()
+    return render_template(
+        'Admin/banner.html',
+        title='Banner manager page',
+        banner_data = list_banner,
+        year=datetime.now().year,
+    )
+
+def load_banner_admin():
+    files = [f for f in os.listdir(app.config['BANNER_IMAGE_FOLDER']) if os.path.isfile(os.path.join(app.config['BANNER_IMAGE_FOLDER'],f)) and f not in IGNORED_FILES ]        
+    file_display = []
+    for f in files:        
+        baner_url = os.path.join(app.config['BANNER_IMAGE_FOLDER'], f)
+        banner_saved = common.banner_info(f, baner_url)             
+        file_display.append(banner_saved)
+    return file_display
