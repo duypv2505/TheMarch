@@ -1,0 +1,373 @@
+﻿/*
+ * jQuery File Upload Plugin JS Example 8.9.1
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+/* global $, window */
+
+$(function () {
+    'use strict';
+    var fileUploadButtonBar = $('.fileupload-buttonbar');
+    var filesList = $('.files');
+    var multiDel = false;
+    var current_height = 0;
+
+    // Initialize the jQuery File Upload widget:
+    $('#fileupload').fileupload({
+        // Uncomment the following to send cross-domain cookies:
+        //xhrFields: {withCredentials: true},
+        url: 'upload'
+    });
+
+    $('#fileupload').fileupload({
+        multiDestroy: function (e) {
+            var delconf = confirm("Xóa tất cả các file đã chọn?");
+            if (!delconf) {
+                e.preventdefault;
+                return false;
+            } else {
+                multiDel = true;
+            }
+        }
+    })
+
+    $('#fileupload').fileupload({
+        multiDestroyFinished: function (e) {
+            multiDel = false;
+        }
+    });
+
+    // Enable iframe cross-domain access via redirect option:
+    $('#fileupload').fileupload(
+        'option',
+        'redirect',
+        window.location.href.replace(
+            /\/[^\/]*$/,
+            '/cors/result.html?%s'
+        )
+    );
+
+    // Event resize window
+    $(window).resize(function () {
+        // Customize header
+        $("#header-fixed").width($("#main_table").width());
+        var new_top = $(".navbar-inverse").height() + $(".header").height() + $(".fileupload-buttonbar").height() - 7;
+        $("#header-fixed").css({ top: new_top });
+        $("#main_table").css({ "margin-top": $(".header").height() + $(".fileupload-buttonbar").height() + $("#header-fixed").height() });
+    });
+    $("#header-fixed").width($("#main_table").width());
+    var top = $(".navbar-inverse").height() + $(".header").height() + $(".fileupload-buttonbar").height() - 7;
+    $("#header-fixed").css({ top: top });
+    $("#main_table").css({ "margin-top": $(".header").height() + $(".fileupload-buttonbar").height() + $("#header-fixed").height() });
+
+    if (window.location.hostname === 'blueimp.github.io') {
+        // Demo settings:
+        $('#fileupload').fileupload('option', {
+            url: '//jquery-file-upload.appspot.com/',
+            // Enable image resizing, except for Android and Opera,
+            // which actually support image resizing, but fail to
+            // send Blob objects via XHR requests:
+            disableImageResize: /Android(?!.*Chrome)|Opera/
+                .test(window.navigator.userAgent),
+            maxFileSize: 5000000,
+            acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
+        });
+        // Upload server status check for browsers with CORS support:
+        if ($.support.cors) {
+            $.ajax({
+                url: '//jquery-file-upload.appspot.com/',
+                type: 'HEAD'
+            }).fail(function () {
+                $('<div class="alert alert-danger"/>')
+                    .text('Upload server currently unavailable - ' +
+                            new Date())
+                    .appendTo('#fileupload');
+            });
+        }
+    } else {
+        // Load existing files:
+        $('#fileupload').addClass('fileupload-processing');
+        $.ajax({
+            // Uncomment the following to send cross-domain cookies:
+            //xhrFields: {withCredentials: true},
+            url: $('#fileupload').fileupload('option', 'url'),
+            dataType: 'json',
+            context: $('#fileupload')[0]
+        }).always(function () {
+            $(this).removeClass('fileupload-processing');
+        }).done(function (result) {
+            $(this).fileupload('option', 'done')
+                .call(this, $.Event('done'), { result: result });
+            if (result.files.length == 0) {
+                fileUploadButtonBar.find(".delete").hide();
+                fileUploadButtonBar.find(".toggle").hide();
+            }
+        });
+    }
+
+    var update = function () {
+        var current_row = $(this).closest('.template-download')
+        var td_preview = current_row.find("td:eq(0)");
+        var td_name = current_row.find("td:eq(1)");
+        var td_material = current_row.find("td:eq(2)");
+        var td_productType = current_row.find("td:eq(3)");
+        var td_category = current_row.find("td:eq(4)");
+        var td_size = current_row.find("td:eq(5)");
+        var td_origin = current_row.find("td:eq(6)");
+        var td_preview_html = '<div class="img-overlay">' +
+                                    '<span class="glyphicon glyphicon-camera"></span>' +
+                                    '<input type="file" name="" id="addFile" style="display:none">' +
+                                '</div>'
+        var td_name_html = "<input class=\"input-update\" placeholder=\"Mã sản phẩm\" type=\"text\" url=\"" + td_name.find("p a").attr("href") + "\" value=\"" + td_name.find("p a").text() + "\" maxlength=\"100\">";
+        var td_material_html = "<input class=\"input-update\" placeholder=\"Chất liệu\" type=\"text\" value=\"" + td_material.find("span").text() + "\" maxlength=\"100\">";
+        var td_productType_html = "<input class=\"input-update\" placeholder=\"Loại sản phẩm\" type=\"text\" value=\"" + td_productType.find("span").text() + "\" maxlength=\"100\">";
+        var td_category_html = "<input class=\"input-update\" type=\"text\" placeholder=\"Danh mục\" value=\"" + td_category.find("span").text() + "\" maxlength=\"100\">";
+        var td_size_html = "<input class=\"input-update\" type=\"text\" placeholder=\"Kích thước\" value=\"" + td_size.find("span").text() + "\" maxlength=\"100\">";
+        var td_origin_html = "<input class=\"input-update\" type=\"text\" placeholder=\"Xuất xứ\" value=\"" + td_origin.find("span").text() + "\" maxlength=\"100\">";
+        td_preview.find("span a").append(td_preview_html);
+        td_preview.find("span a").removeAttr("href");
+        td_preview.find("span a").removeAttr("data-gallery");
+        td_preview.find("span a span").on('click', change_file);
+        td_preview.find("#addFile").on('change', update_image);
+        td_name.html(td_name_html);
+        td_material.html(td_material_html);
+        td_productType.html(td_productType_html);
+        td_category.html(td_category_html);
+        td_size.html(td_size_html);
+        td_origin.html(td_origin_html);
+        $(this).hide()
+        current_row.find(".startUpdate").show();
+        current_row.find(".cancelUpdate").show();
+        current_row.find(".delete").hide();
+        current_row.find(".toggle").remove();
+    }
+
+    var change_file = function () {
+        $(this).parent().find("#addFile")[0].click();
+    }
+
+    var update_image = function () {
+        readURL($(this));
+    }
+
+    function readURL(input) {
+        if (input[0].files && input[0].files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                input.closest(".preview").find("a img").attr('src', e.target.result).width(80).height(43);
+            }
+            reader.readAsDataURL(input[0].files[0]);
+        }
+    }
+
+    $("#inputFile").change(function () {
+        readURL(this);
+    });
+
+    $('input[type="file"]').on('change', function () {
+        var val = $(this).val();
+    })
+
+    var cancel_update = function (element, result) {
+        var current_row;
+        var button_cancel;
+        var name, material, productType, category, size, origin;
+        if (element[0] != undefined) {
+            current_row = element.closest('.template-download');
+            button_cancel = current_row.find(".cancelUpdate");
+        }
+        else {
+            var current_row = $(this).closest('.template-download');
+            button_cancel = $(this);
+        }
+        button_cancel.hide();
+        current_row.find(".update").show();
+        current_row.find(".startUpdate").hide();
+        current_row.find(".delete").show();
+        var toggle_html = '<input type="checkbox" name="delete" value="1" class="toggle">';
+        current_row.find("td:eq(7)").append(toggle_html);
+        var td_preview = current_row.find("td:eq(0)");
+        var td_name = current_row.find("td:eq(1)");
+        var td_material = current_row.find("td:eq(2)");
+        var td_productType = current_row.find("td:eq(3)");
+        var td_category = current_row.find("td:eq(4)");
+        var td_size = current_row.find("td:eq(5)");
+        var td_origin = current_row.find("td:eq(6)");
+        name = td_name.find("input").attr("value")
+        material = td_material.find("input").attr("value")
+        productType = td_productType.find("input").attr("value")
+        category = td_category.find("input").attr("value")
+        size = td_size.find("input").attr("value")
+        origin = td_origin.find("input").attr("value")
+        // After Update
+        if (element[0] != undefined) {
+            if (result.result == 'success') {
+                name = td_name.find("input").val();
+                material = td_material.find("input").val();
+                productType = td_productType.find("input").val();
+                category = td_category.find("input").val();
+                size = td_size.find("input").val();
+                origin = td_origin.find("input").val();
+            }
+        }
+        var td_name_html = '<p class="name">' +
+                                    '<a href=\"' + td_name.find("input").attr("url") + '\" title=\"' + name + '\" download=\"' + name + '\" data-gallery="">' + name + '</a>' +
+                                '</p>';
+        var td_material_html = '<span class="material">' + material + '</span>';
+        var td_productType_html = '<span class="material">' + productType + '</span>';
+        var td_category_html = '<span class="material">' + category + '</span>';
+        var td_size_html = '<span class="material">' + size + '</span>';
+        var td_origin_html = '<span class="material">' + origin + '</span>';
+        td_preview.find(".img-overlay").remove();
+        td_preview.find("span a").attr("href", "data/" + td_preview.find("input").attr("value"))
+        td_preview.find("span a").attr("data-gallery", "");
+        var img_url = td_preview.find("span a img").attr("url") + "?" + Math.random();
+        td_preview.find("span a img").attr("src", img_url);
+        td_name.html(td_name_html);
+        if (result != undefined) {
+            if (result.result == "error") {
+                var span_error = '<div><span class="label label-danger">Error</span>' + result.message + '</div>'
+                td_name.append(span_error);
+            }
+        }
+        td_material.html(td_material_html);
+        td_productType.html(td_productType_html);
+        td_category.html(td_category_html);
+        td_size.html(td_size_html);
+        td_origin.html(td_origin_html);
+    }
+
+    var start_update = function () {
+        var current_row = $(this).closest('.template-download');
+        var files = current_row.find("td:eq(0) input").prop('files');
+        var td_id = current_row.find("td:eq(0)");
+        var td_name = current_row.find("td:eq(1)");
+        var td_material = current_row.find("td:eq(2)");
+        var td_productType = current_row.find("td:eq(3)");
+        var td_category = current_row.find("td:eq(4)");
+        var td_size = current_row.find("td:eq(5)");
+        var td_origin = current_row.find("td:eq(6)");
+        if (files.length != 0 || td_name.find("input").attr("value") != td_name.find("input").val() ||
+                    td_material.find("input").attr("value") != td_material.find("input").val() ||
+                    td_productType.find("input").attr("value") != td_productType.find("input").val() ||
+                    td_category.find("input").attr("value") != td_category.find("input").val() ||
+                    td_size.find("input").attr("value") != td_size.find("input").val() ||
+                    td_origin.find("input").attr("value") != td_origin.find("input").val()) {
+            var formData = {
+                wood_id: td_id.find(".id").val(),
+                name: td_name.find("input").val(),
+                material: td_material.find("input").val(),
+                productType: td_productType.find("input").val(),
+                category: td_category.find("input").val(),
+                size: td_size.find("input").val(),
+                origin: td_origin.find("input").val()
+            }
+            if (files.length == 0) {
+                files = {}
+            }
+            $('#fileupload').fileupload('send', { files: files, formData: formData, url: '/update' })
+            .success(function (result, textStatus, jqXHR) {
+                var element = $('.files :input[value="' + result.wood_id + '"]');
+                cancel_update(element, result);
+            })
+            .error(function (jqXHR, textStatus, errorThrown) {
+                alert("Có lỗi xảy ra, Xin thử lại!")
+            })
+            .complete(function (result, textStatus, jqXHR) {
+
+            });
+        }
+    }
+
+    fileUploadButtonBar.find('.start').hide();
+    fileUploadButtonBar.find('.cancel').hide();
+    $('#fileupload').bind('fileuploadadd', function (e, data) {
+        current_height = 0;
+    })
+
+    $('#fileupload').bind('fileuploadadded', function (e, data) {
+        if ($('#fileupload').find(".files .start").length > 0) {
+            fileUploadButtonBar.find('.start').show();
+            fileUploadButtonBar.find('.cancel').show();
+            var scroll_height = $('.files').height() - current_height;
+            current_height = $('.files').height();
+            if (scroll_height > 0) {
+                $("html, body").animate({ scrollTop: scroll_height }, 1000);
+            }
+        }
+    })
+
+    $('#fileupload').bind('fileuploadcompleted', function (e, data) {
+        if ($('#fileupload').find(".files .start").length == 0) {
+            if ($('#fileupload').find(".files tr").length > 0) {
+                fileUploadButtonBar.find('.update').show();
+                fileUploadButtonBar.find('.delete').show();
+                fileUploadButtonBar.find(".toggle").show();
+                fileUploadButtonBar.find(".cancelUpdate").hide();
+            }
+            fileUploadButtonBar.find('.start').hide();
+            fileUploadButtonBar.find('.cancel').hide();
+            fileUploadButtonBar.find('.fileinput-button').show();
+        }
+        else {
+            if ($('#fileupload').find(".files .delete").length > 0) {
+                fileUploadButtonBar.find('.delete').show();
+                fileUploadButtonBar.find(".toggle").show();
+            }
+        }
+        data.context.find('.update').on('click', update);
+        data.context.find(".startUpdate").on('click', start_update);
+        data.context.find(".cancelUpdate").on('click', cancel_update);
+    })
+
+    $('#fileupload').bind('fileuploadfailed', function (e, data) {
+        if ($('#fileupload').find(".files .start").length == 0) {
+            if ($('#fileupload').find(".files tr").length > 0) {
+                fileUploadButtonBar.find('.update').show();
+                fileUploadButtonBar.find('.delete').show();
+                fileUploadButtonBar.find(".toggle").show();
+            }
+            fileUploadButtonBar.find('.start').hide();
+            fileUploadButtonBar.find('.cancel').hide();
+        }
+    })
+
+    $('#fileupload').bind('fileuploaddestroyed', function (e, data) {
+        if ($('#fileupload').find(".files .delete").length == 0) {
+            fileUploadButtonBar.find('.delete').hide();
+            fileUploadButtonBar.find(".toggle").hide();
+        }
+        if ($('#fileupload').find(".files .start").length == 0) {
+            if ($('#fileupload').find(".files .delete").length == 0) {
+                fileUploadButtonBar.find('.update').hide();
+            }
+        }
+    })
+
+    $('#fileupload').bind('fileuploadsubmit', function (e, data) {
+        var name = data.context.find("td:eq(1) input").val();
+        var material = data.context.find("td:eq(2) input").val();
+        var productType = data.context.find("td:eq(3) input").val();
+        var category = data.context.find("td:eq(4) input").val();
+        var size = data.context.find("td:eq(5) input").val();
+        var origin = data.context.find("td:eq(6) input").val();
+        data.formData = { name: name, material: material, productType: productType, category: category, size: size, origin: origin };
+    })
+
+    $('#fileupload').on('fileuploaddestroy', function (e, data) {
+        if (multiDel) { return true; };
+        var filename = data.context.find("td:eq(1) p a").text();
+        var delconf = confirm("Xóa file \"" + decodeURIComponent(filename) + "\"?");
+        if (!delconf) {
+            e.preventDefault;
+            return false;
+        }
+    });
+
+});
