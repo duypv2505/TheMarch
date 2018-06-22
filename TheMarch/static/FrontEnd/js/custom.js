@@ -208,8 +208,15 @@
 
     geocoder = new google.maps.Geocoder();
 
+    var icon = {
+        url: "/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(20, 35) // anchor
+    };
+
     var mapOptions = {
-        zoom: 14,
+        zoom: 19,
         scrollwheel: false,
         draggable: draggable,
         mapTypeControl: false,
@@ -220,22 +227,23 @@
     map = new google.maps.Map(document.getElementById('location-map'), mapOptions);
 
     var contentString = '<div id="content">' +
-        '<strong>'+companyName+'</strong><br>' +
-        'Address: 3861 Sepulveda Blvd., Culver City, CA 90230 ' +
+        '<strong>' + companyName + '</strong><br>' +
+        'Address: 51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh ' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
         content: contentString
     });
 
-    geocoder.geocode({'address': address}, function (results, status) {
+    geocoder.geocode({ 'address': address }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
-                icon: 'img/mapmarker.png',
-                title: 'Uluru (Ayers Rock)'
+                //icon: '/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png',
+                icon: icon,
+                title: companyName
             });
 
             google.maps.event.addListener(marker, 'click', function () {

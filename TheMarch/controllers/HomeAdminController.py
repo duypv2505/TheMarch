@@ -26,6 +26,7 @@ import TheMarch.common as common
 bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'hard to guess string'
 app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['ROOT_FOLDER'] = 'TheMarch/'
 app.config['BANNER_IMAGE_FOLDER'] = 'dataset/banner/'
 app.config['COFFEE_IMAGE_FOLDER'] = 'dataset/coffee/'
 app.config['EVENT_IMAGE_FOLDER'] = 'dataset/event/'
@@ -69,15 +70,10 @@ class LoginForm(FlaskForm):
                            render_kw={"placeholder": "Mật khẩu".decode('utf-8')})
     remember = BooleanField('Ghi nhớ'.decode('utf-8'))
 
-@app.route('/admin')
+@app.route('/home_admin')
 @login_required
 def home_admin():
-    """Renders the home page."""
-    return render_template(
-        'Admin/Coffee.html',
-        title='Coffee admin page',
-        year=datetime.now().year,
-    )
+    return redirect(url_for('banner'))
 
 #############
 # Get detail of user
@@ -152,23 +148,22 @@ def upload_banner():
     files = request.files['file']
     if files:          
         file_name = secure_filename(files.filename)
-        file_name = common.gen_file_name(file_name,'TheMarch/' + app.config['BANNER_IMAGE_FOLDER'])   
-        banner_number = request.form['number']
-        if banner_number > 0:
-            #Delete old banner
-            old_file_name = request.form['file_name']
+        file_name = common.gen_file_name(file_name,'TheMarch/' + app.config['BANNER_IMAGE_FOLDER'])           
+        #Delete old banner
+        old_file_name = request.form['old_file_name']
+        if old_file_name != '':            
             old_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)
             if os.path.exists(old_file_path):
                 os.remove(old_file_path)
-            file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)            
-            file_name = file_name.replace(os.path.splitext(file_name)[0], 'banner_' + banner_number)
-            #filename = 'banner_' + banner_number
+        file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)            
+        #file_name = file_name.replace(os.path.splitext(file_name)[0], 'banner_' + banner_number)
+        #filename = 'banner_' + banner_number
         # save file to disk
         uploaded_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)
         files.save(uploaded_file_path)
         # get file size after saving
         size = os.path.getsize(uploaded_file_path)
-    return simplejson.dumps({"files_name": file_name, "banner_number": banner_number})    
+    return simplejson.dumps({"files_name": file_name})    
 
 
 #############
@@ -177,15 +172,14 @@ def upload_banner():
 @app.route("/delete_banner", methods=['DELETE'])
 #@login_required
 def delete_banner():   
-    row_index = request.form['row_index'] 
     file_name = request.form['file_name'] 
-    file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)
+    file_path = os.path.join(app.config['ROOT_FOLDER'] + app.config['BANNER_IMAGE_FOLDER'], file_name)
     if os.path.exists(file_path):
         try:
             os.remove(file_path)
-            return simplejson.dumps({result: 'success', row_index: row_index})
+            return simplejson.dumps({'result': 'success'})
         except:
-            return simplejson.dumps({result: 'error'})
+            return simplejson.dumps({'result': 'error'})
 
 #############
 # Banner controller

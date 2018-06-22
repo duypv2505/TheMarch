@@ -4533,11 +4533,7 @@
     </Content>
     <Content Include="TheMarch\templates\Admin\layout.html" />
     <Content Include="TheMarch\templates\Admin\login.html" />
-    <Content Include="TheMarch\templates\Admin\master.html" />
     <Content Include="TheMarch\templates\Admin\navbar.html" />
-    <Content Include="TheMarch\templates\Admin\right_sidebar.html">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="TheMarch\templates\Admin\sidebar.html" />
     <Content Include="TheMarch\templates\contact.html" />
     <Content Include="TheMarch\templates\Home\home.html" />

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,26 +11,26 @@
   <meta name="author" content="Themeinjection.com">
 
   <!-- Bootstrap -->
-  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/FrontEnd/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap 3 Date Picker -->
-  <link href="bower_components/bootstrap-3-datepicker/dist/css/bootstrap-datepicker.min.css" rel='stylesheet' type='text/css'>
+  <link href="/static/FrontEnd/bower_components/bootstrap-3-datepicker/dist/css/bootstrap-datepicker.min.css" rel='stylesheet' type='text/css'>
 
   <!-- Google Open Sans Font -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
   <!-- Font Awesome -->
-  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+  <link href="/static/FrontEnd/bower_components/font-awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
   <!-- Animate Css -->
-  <link href="bower_components/animate.css/animate.min.css" rel='stylesheet' type='text/css'>
+  <link href="/static/FrontEnd/bower_components/animate.css/animate.min.css" rel='stylesheet' type='text/css'>
 
   <!-- Simple Line Icons -->
-  <link href="bower_components/simple-line-icons/css/simple-line-icons.css" rel='stylesheet' type='text/css'>
+  <link href="/static/FrontEnd/bower_components/simple-line-icons/css/simple-line-icons.css" rel='stylesheet' type='text/css'>
 
 
   <!-- Theme Style -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/static/FrontEnd/css/styles.css">
   <!-- Available main styles: styles-blue.css, styles-ochre.css -->
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,11 +41,11 @@
     <![endif]-->
 
   <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/FrontEnd/img/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/FrontEnd/img/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/FrontEnd/img/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/static/FrontEnd/img/ico/favicon.png">
 
 </head>
 
@@ -65,7 +65,7 @@
                 </button>
           <!--Brand / Logo start-->
           <a class="navbar-brand scroll-to" href="#page-top">
-                    <img src="img/navbar-logo.png" class="img-responsive-logo" alt="Accommodation Landing Page"/>
+                    <img src="/static/FrontEnd/img/navbar-logo.png" class="img-responsive-logo" alt="Accommodation Landing Page"/>
                 </a>
           <!--Brand / Logo end-->
         </div>
@@ -103,26 +103,32 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="5000">
       <div class="carousel-inner" role="listbox">
         <!--Slider Items start-->
-        <div class="item active">
-          <img src="img/slider-img-1.jpg" alt="The Sea Villa">
+          {% for sub in banner %}
+          <div class="item active">
+              <img src="load_banner_image/{{sub.name}}" alt="{{sub.name}}">
+              <div class="carousel-caption">Describe the Image for SEO 1</div>
+          </div>
+          {% endfor %}
+        <!--<div class="item active">
+          <img src="/static/FrontEnd/img/slider-img-1.jpg" alt="The Sea Villa">
 
           <div class="carousel-caption">Describe the Image for SEO 1</div>
         </div>
         <div class="item">
-          <img src="img/slider-img-2.jpg" alt="The Sea Villa">
+          <img src="/static/FrontEnd/img/slider-img-2.jpg" alt="The Sea Villa">
 
           <div class="carousel-caption">Describe the Image for SEO 2</div>
         </div>
         <div class="item">
-          <img src="img/slider-img-4.jpg" alt="The Sea Villa">
+          <img src="/static/FrontEnd/img/slider-img-4.jpg" alt="The Sea Villa">
 
           <div class="carousel-caption">Describe the Image for SEO 2</div>
         </div>
         <div class="item">
-          <img src="img/slider-img-3.jpg" alt="The Sea Villa">
+          <img src="/static/FrontEnd/img/slider-img-3.jpg" alt="The Sea Villa">
 
           <div class="carousel-caption">Describe the Image for SEO 2</div>
-        </div>
+        </div>-->
         <!--Slider Items end-->
       </div>
       <!-- Controls start -->
@@ -179,7 +185,7 @@
           </div>
           <div class="col-md-6">
             <div class="content-img-box">
-              <img class="img-responsive content-img" src="img/content-img-right.jpg" alt="Content Img Left" />
+              <img class="img-responsive content-img" src="/static/FrontEnd/img/content-img-right.jpg" alt="Content Img Left" />
             </div>
           </div>
         </div>
@@ -200,7 +206,7 @@
           </div>
           <div class="col-md-6">
             <div class="content-img-box">
-              <img class="img-responsive content-img" src="img/content-img-left.jpg" alt="Content Image Left" />
+              <img class="img-responsive content-img" src="/static/FrontEnd/img/content-img-left.jpg" alt="Content Image Left" />
             </div>
           </div>
         </div>
@@ -232,7 +238,7 @@
                   <div class="attraction-link">
                     <a href="http://www.tablemountain.net/" target="_blank">
                       <div class="attraction-img">
-                        <img class="img-responsive" src="img/about-signature.png" alt="Things to do" />
+                        <img class="img-responsive" src="/static/FrontEnd/img/about-signature.png" alt="Things to do" />
 
                         <div class="attraction-overlay">
                           <i class="icon-link"></i>
@@ -253,7 +259,7 @@
                   <div class="attraction-link">
                     <a href="http://www.tablemountain.net/" target="_blank">
                       <div class="attraction-img">
-                        <img class="img-responsive" src="img/about-signature.png" alt="Things to do" />
+                        <img class="img-responsive" src="/static/FrontEnd/img/about-signature.png" alt="Things to do" />
 
                         <div class="attraction-overlay">
                           <i class="icon-link"></i>
@@ -282,7 +288,7 @@
                   <div class="attraction-link">
                     <a href="http://www.tablemountain.net/" target="_blank">
                       <div class="attraction-img">
-                        <img class="img-responsive" src="img/about-signature.png" alt="Things to do" />
+                        <img class="img-responsive" src="/static/FrontEnd/img/about-signature.png" alt="Things to do" />
 
                         <div class="attraction-overlay">
                           <i class="icon-link"></i>
@@ -305,7 +311,7 @@
                   <div class="attraction-link">
                     <a href="http://www.tablemountain.net/" target="_blank">
                       <div class="attraction-img">
-                        <img class="img-responsive" src="img/about-signature.png" alt="Things to do" />
+                        <img class="img-responsive" src="/static/FrontEnd/img/about-signature.png" alt="Things to do" />
 
                         <div class="attraction-overlay">
                           <i class="icon-link"></i>
@@ -417,7 +423,7 @@
             <div class="attraction-video">
               <!--Video Preview Image start-->
               <div class="video-preview-img">
-                <img src="img/youtube-preview.jpg" alt="Video Preview Image" class="img-responsive" />
+                <img src="/static/FrontEnd/img/youtube-preview.jpg" alt="Video Preview Image" class="img-responsive" />
 
                 <div class="video-play-button"><i class="fa fa-play fa-fw"></i></div>
               </div>
@@ -440,7 +446,7 @@
             <div class="attraction-link">
               <a href="http://www.tablemountain.net/" target="_blank">
                 <div class="attraction-img">
-                  <img class="img-responsive" src="img/things-to-do1.jpg" alt="Things to do" />
+                  <img class="img-responsive" src="/static/FrontEnd/img/things-to-do1.jpg" alt="Things to do" />
 
                   <div class="attraction-overlay">
                     <i class="icon-link"></i>
@@ -460,7 +466,7 @@
                 <div class="attraction-link">
                   <a href="http://www.waterfront.co.za/" target="_blank">
                     <div class="attraction-img">
-                      <img class="img-responsive" src="img/things-to-do2.jpg" alt="Things to do" />
+                      <img class="img-responsive" src="/static/FrontEnd/img/things-to-do2.jpg" alt="Things to do" />
 
                       <div class="attraction-overlay">
                         <i class="icon-link"></i>
@@ -480,7 +486,7 @@
                 <div class="attraction-link">
                   <a href="http://www.theoldbiscuitmill.co.za/" target="_blank">
                     <div class="attraction-img">
-                      <img class="img-responsive" src="img/things-to-do3.jpg" alt="Things to do" />
+                      <img class="img-responsive" src="/static/FrontEnd/img/things-to-do3.jpg" alt="Things to do" />
 
                       <div class="attraction-overlay">
                         <i class="icon-link"></i>
@@ -502,7 +508,7 @@
             <div class="attraction-link">
               <a href="http://www.winelands.co.za/" target="_blank">
                 <div class="attraction-img">
-                  <img class="img-responsive" src="img/things-to-do4.jpg" alt="Things to do" />
+                  <img class="img-responsive" src="/static/FrontEnd/img/things-to-do4.jpg" alt="Things to do" />
 
                   <div class="attraction-overlay">
                     <i class="icon-link"></i>
@@ -522,7 +528,7 @@
             <div class="attraction-link">
               <a href="http://www.southafrica.info/travel/surf/whale.htm#.VabNE5PtlBc" target="_blank">
                 <div class="attraction-img">
-                  <img class="img-responsive" src="img/things-to-do5.jpg" alt="Things to do" />
+                  <img class="img-responsive" src="/static/FrontEnd/img/things-to-do5.jpg" alt="Things to do" />
 
                   <div class="attraction-overlay">
                     <i class="icon-link"></i>
@@ -540,7 +546,7 @@
             <div class="attraction-link">
               <a href="http://www.bayharbour.co.za/" target="_blank">
                 <div class="attraction-img">
-                  <img class="img-responsive" src="img/things-to-do6.jpg" alt="Things to do" />
+                  <img class="img-responsive" src="/static/FrontEnd/img/things-to-do6.jpg" alt="Things to do" />
 
                   <div class="attraction-overlay">
                     <i class="icon-link"></i>
@@ -772,7 +778,7 @@
           <div class="col-md-12">
             <div class="row room-tabs-info">
               <div class="div col-md-6">
-                <img src="img/tripadvisor.gif" alt="Tripadvisor" class="mr15 mt10" />
+                <img src="/static/FrontEnd/img/tripadvisor.gif" alt="Tripadvisor" class="mr15 mt10" />
 
                 <p>Nằm ngay mặt tiền đường Trần Quang Diệu, một trong những khu vui chơi ăn uống sầm uất ở Sài Gòn, The March Coffee tạo ấn tượng ban đầu không hề giống một quán café. Ngay phía trước cửa, những gam màu nổi bật, bắt mắt đánh vào mắt người
                   đi đường sự chú ý, nhưng bên trong lại là kiểu ánh sáng dịu nhẹ, màu vàng âm áp so với với bên ngoài.</p>
@@ -801,21 +807,21 @@
                     <div class="room-tabs-gallery">
                       <div class="room-tabs-gallery-thumbnails">
                         <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room1-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room1-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room1-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object1">
-                                                <img class="img-responsive" src="img/room1-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room1-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
                                             </a>
                       </div>
                       <div class="room-tabs-gallery-image">
                         <a class="room-tabs-gallery-preview-container" href="#">
-                                                <img class="img-responsive room-tabs-gallery-preview" src="img/room1-demo2.jpg"
+                                                <img class="img-responsive room-tabs-gallery-preview" src="/static/FrontEnd/img/room1-demo2.jpg"
                                                      alt="Image Preview" title="The Image Title"/>
                                             </a>
 
@@ -868,21 +874,21 @@
                     <div class="room-tabs-gallery">
                       <div class="room-tabs-gallery-thumbnails">
                         <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room2-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room2-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room2-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object2">
-                                                <img class="img-responsive" src="img/room2-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room2-demo4.jpg" alt="Gallery Thumbnail" title="The Image Title4"/>
                                             </a>
                       </div>
                       <div class="room-tabs-gallery-image">
                         <a class="room-tabs-gallery-preview-container" href="#">
-                                                <img class="img-responsive room-tabs-gallery-preview" src="img/room2-demo1.jpg"
+                                                <img class="img-responsive room-tabs-gallery-preview" src="/static/FrontEnd/img/room2-demo1.jpg"
                                                      alt="Image Preview" title="The Image Title"/>
                                             </a>
 
@@ -937,18 +943,18 @@
                     <div class="room-tabs-gallery">
                       <div class="room-tabs-gallery-thumbnails">
                         <a class="room-tabs-gallery-thumb" href="#object3">
-                                                <img class="img-responsive" src="img/room3-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room3-demo3.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object3">
-                                                <img class="img-responsive" src="img/room3-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room3-demo2.jpg" alt="Gallery Thumbnail" title="The Image Title2"/>
                                             </a>
                         <a class="room-tabs-gallery-thumb" href="#object3">
-                                                <img class="img-responsive" src="img/room3-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room3-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title3"/>
                                             </a>
                       </div>
                       <div class="room-tabs-gallery-image">
                         <a class="room-tabs-gallery-preview-container" href="#">
-                                                <img class="img-responsive room-tabs-gallery-preview" src="img/room3-demo3.jpg"
+                                                <img class="img-responsive room-tabs-gallery-preview" src="/static/FrontEnd/img/room3-demo3.jpg"
                                                      alt="Image Preview" title="The Image Title"/>
                                             </a>
 
@@ -1003,12 +1009,12 @@
                     <div class="room-tabs-gallery">
                       <div class="room-tabs-gallery-thumbnails">
                         <a class="room-tabs-gallery-thumb" href="#object4">
-                                                <img class="img-responsive" src="img/room4-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
+                                                <img class="img-responsive" src="/static/FrontEnd/img/room4-demo1.jpg" alt="Gallery Thumbnail" title="The Image Title1"/>
                                             </a>
                       </div>
                       <div class="room-tabs-gallery-image">
                         <a class="room-tabs-gallery-preview-container" href="#">
-                                                <img class="img-responsive room-tabs-gallery-preview" src="img/room4-demo1.jpg"
+                                                <img class="img-responsive room-tabs-gallery-preview" src="/static/FrontEnd/img/room4-demo1.jpg"
                                                      alt="Image Preview" title="The Image Title"/>
                                             </a>
 
@@ -1096,22 +1102,22 @@
         </div>
         <div class="row sc-animate" data-effect="fadeIn">
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner1.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner1.png" alt="Partner" /></div>
           </div>
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner2.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner2.png" alt="Partner" /></div>
           </div>
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner3.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner3.png" alt="Partner" /></div>
           </div>
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner4.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner4.png" alt="Partner" /></div>
           </div>
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner5.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner5.png" alt="Partner" /></div>
           </div>
           <div class="col-md-2 col-sm-4 partner">
-            <div class="partner-img"><img class="img-responsive" src="img/partner6.png" alt="Partner" /></div>
+            <div class="partner-img"><img class="img-responsive" src="/static/FrontEnd/img/partner6.png" alt="Partner" /></div>
           </div>
         </div>
       </div>
@@ -1132,7 +1138,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="contact-img">
-                    <img class="img-responsive" src="img/contact-img.jpg" alt="Contact Image" />
+                    <img class="img-responsive" src="/static/FrontEnd/img/contact-img.jpg" alt="Contact Image" />
                   </div>
                   <div class="contact-person">Minh Nhỏ</div>
                   <div class="contact-title">Đặt show và báo giá</div>
@@ -1189,7 +1195,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2><img src="img/address-logo.png" alt="Logo"/></h2>
+            <h2><img src="/static/FrontEnd/img/address-logo.png" alt="Logo"/></h2>
             <address>51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh</address>
             <p class="address-info">Nếu có bất kỳ câu hỏi hay thông tin thắc mắc, vui lòng liên hệ với chúng tôi:</p>
             <ul class="phones">
@@ -1526,20 +1532,20 @@
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/jquery/dist/jquery.min.js"></script>
 
-  <script src="bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
-  <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-  <script src="bower_components/jquery-animatenumber/jquery.animateNumber.min.js"></script>
-  <script src="bower_components/bootstrap-3-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/jquery-animatenumber/jquery.animateNumber.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/bootstrap-3-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/static/FrontEnd/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <!-- Google Maps Api -->
-  <script style="" type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSyV5iRzD7-6agsTEaq6sO9NQDfE5lUBQ&amp;sensor=false&amp;v=3&amp;callback=mtsMapInitialize"></script>
 
 
-  <script src="js/custom.js"></script>
+  <script src="/static/FrontEnd/js/custom.js"></script>
 
 </body>
 
