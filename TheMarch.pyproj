@@ -4541,6 +4541,7 @@
     <Content Include="TheMarch\templates\Admin\sidebar.html" />
     <Content Include="TheMarch\templates\contact.html" />
     <Content Include="TheMarch\templates\Home\home.html" />
+    <Content Include="TheMarch\templates\Home\index.html" />
     <Content Include="TheMarch\templates\index.html" />
     <Content Include="TheMarch\templates\layout.html" />
   </ItemGroup>

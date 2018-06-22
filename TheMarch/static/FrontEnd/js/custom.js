@@ -6,7 +6,7 @@
 
     // Location Address
     //-------------------------------------------------------------------------------
-    var companyName = 'The March Coffee';
+    var companyName = 'Accomodation Landing Page';
     var address = '51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh '; // Enter your Address
 
 
@@ -44,7 +44,7 @@
     scrollTo.on('click', function (event) {
         $('.modal').modal('hide');
         var position = $(document).scrollTop();
-        var scrollOffset = 100;
+        var scrollOffset = 0; //Hoang edit scrollOffset value from 100 to 0 - 20/06/2018
 
         var marker = $(this).attr('href');
         $('html, body').animate({scrollTop: $(marker).offset().top - scrollOffset}, 'slow');
@@ -79,14 +79,15 @@
         $c.css({'backgroundPosition':pos});
     }
 
-    reviews.waypoint(function() {
-        $w.bind('scroll', function(e){
-            move(reviews);
-        });
-
-    },{
-        offset: '100%'
-    });
+    //Hoang comment waypoint function - 20/06/2018
+    // reviews.waypoint(function() {
+    //     $w.bind('scroll', function(e){
+    //         move(reviews);
+    //     });
+    //
+    // },{
+    //     offset: '100%'
+    // });
 
 
 
@@ -207,15 +208,8 @@
 
     geocoder = new google.maps.Geocoder();
 
-    var icon = {
-        url: "/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png", // url
-        scaledSize: new google.maps.Size(50, 50), // scaled size
-        origin: new google.maps.Point(0, 0), // origin
-        anchor: new google.maps.Point(20, 35) // anchor
-    };
-
     var mapOptions = {
-        zoom: 19,
+        zoom: 14,
         scrollwheel: false,
         draggable: draggable,
         mapTypeControl: false,
@@ -227,7 +221,7 @@
 
     var contentString = '<div id="content">' +
         '<strong>'+companyName+'</strong><br>' +
-        'Address: 51 Trần Quang Diệu, Phường 13, Quận 3, Hồ Chí Minh ' +
+        'Address: 3861 Sepulveda Blvd., Culver City, CA 90230 ' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
@@ -240,9 +234,8 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
-                //icon: '/static/FrontEnd/img/ico/apple-touch-icon-114-precomposed.png',
-                icon: icon,
-                title: companyName
+                icon: 'img/mapmarker.png',
+                title: 'Uluru (Ayers Rock)'
             });
 
             google.maps.event.addListener(marker, 'click', function () {
