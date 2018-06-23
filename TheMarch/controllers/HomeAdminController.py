@@ -5,7 +5,7 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import Flask, request, render_template, redirect, url_for, send_from_directory
 from TheMarch import app
-from pymongo import MongoClient
+from pymongo import MongoClient, ASCENDING, DESCENDING
 from flask import session, flash, abort
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -20,7 +20,7 @@ import simplejson
 import json
 from datetime import timedelta
 from operator import itemgetter, attrgetter
-
+from PIL import Image
 import TheMarch.common as common
 
 bootstrap = Bootstrap(app)
@@ -146,24 +146,41 @@ def do_admin_login():
 #@login_required
 def upload_banner():    
     files = request.files['file']
-    if files:          
-        file_name = secure_filename(files.filename)
-        file_name = common.gen_file_name(file_name,'TheMarch/' + app.config['BANNER_IMAGE_FOLDER'])           
-        #Delete old banner
-        old_file_name = request.form['old_file_name']
-        if old_file_name != '':            
-            old_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)
-            if os.path.exists(old_file_path):
-                os.remove(old_file_path)
-        file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)            
-        #file_name = file_name.replace(os.path.splitext(file_name)[0], 'banner_' + banner_number)
-        #filename = 'banner_' + banner_number
-        # save file to disk
-        uploaded_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)
-        files.save(uploaded_file_path)
-        # get file size after saving
-        size = os.path.getsize(uploaded_file_path)
-    return simplejson.dumps({"files_name": file_name})    
+    if files:     
+        try:     
+            file_name = secure_filename(files.filename)
+            file_name = common.gen_file_name(file_name,'TheMarch/' + app.config['BANNER_IMAGE_FOLDER'])
+            banner_number = request.form['banner_number']
+            old_file_name = request.form['old_file_name']
+            if banner_number > 0:           
+                #Delete old banner image, database                               
+                if old_file_name != '':            
+                    old_file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], old_file_name)
+                    if os.path.exists(old_file_path):
+                        os.remove(old_file_path)
+                    #delete database
+                    common.current_db.Banner.remove({"file_name": old_file_name, "index": banner_number})
+                #Inset new image                                
+                if float(banner_number) == 0:
+                    #Get max index
+                    max_banner = common.current_db.Banner.find().sort("index", DESCENDING).limit(1)
+                    banner_number = int(max_banner[0]['index']) + 1
+                    banner_number = str(banner_number)
+                #file_name = file_name.replace(os.path.splitext(file_name)[0], banner_number + '_banner')    
+                file_name = banner_number + '_' + file_name     
+                file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)   
+                # save file to disk
+                files.save(file_path)
+                #Image.open(files).save(file_path)
+                # Save database
+                common.current_db.Banner.insert({"file_name": file_name, "index": banner_number})                
+                return simplejson.dumps({'result': 'success', 'file_name' : file_name})
+            else:        
+                return simplejson.dumps({'result': 'success', 'file_name' : 'No file'})
+        except Exception, e:
+            return simplejson.dumps({'result': 'error', 'error_message': str(e) ,'file_name' : 'No file'})
+    else:
+        return simplejson.dumps({"result": 'success', 'file_name' : 'No file'})    
 
 
 #############
@@ -173,13 +190,23 @@ def upload_banner():
 #@login_required
 def delete_banner():   
     file_name = request.form['file_name'] 
+    banner_number = request.form['banner_number']
     file_path = os.path.join(app.config['ROOT_FOLDER'] + app.config['BANNER_IMAGE_FOLDER'], file_name)
-    if os.path.exists(file_path):
-        try:
-            os.remove(file_path)
-            return simplejson.dumps({'result': 'success'})
-        except:
-            return simplejson.dumps({'result': 'error'})
+    try:
+        if os.path.exists(file_path):
+            os.remove(file_path)            
+            #Remove database
+        common.current_db.Banner.remove({"file_name": file_name, "index": banner_number})
+        #Get default file
+        #file_default = [f for f in os.listdir('TheMarch/' + app.config['BANNER_IMAGE_FOLDER']) if os.path.isfile(os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'],f)) and f == 'default.jpg' ]                    
+        #file_name = file_name.replace(os.path.splitext(file_name)[0], banner_number + '_banner')         
+        #file_name = banner_number + '_banner.jpg'
+        #file_path = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], file_name)   
+        #file_path_default = os.path.join('TheMarch/' + app.config['BANNER_IMAGE_FOLDER'], 'default.jpg')
+        #copyfile(file_path_default, file_path)
+        return simplejson.dumps({'result': 'success'})        
+    except:
+        return simplejson.dumps({'result': 'error'})
 
 #############
 # Banner controller
@@ -193,6 +220,13 @@ def banner():
         banner_data = list_banner,
         year=datetime.now().year,
     )
+
+@app.route("/refesh_banner", methods=['GET'])
+#@login_required
+def refesh_banner():    
+    list_banner = common.load_banner_image()            
+    #return simplejson.dumps({"files": list_banner});
+    return simplejson.dumps({'list_banner': list_banner})
 
 #############
 # Event controller

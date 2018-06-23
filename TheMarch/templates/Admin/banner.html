@@ -4,23 +4,24 @@
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Quản lý hình banner</h4>            
+            <h4 class="page-title">Quản lý hình banner</h4>
         </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
             <button id="add_banner" class="fcbtn btn btn-info btn-outline btn-1c pull-right">Thêm banner</button>
+            <button style="margin-right: 1%;" id="refesh_banner" class="fcbtn btn btn-info btn-outline btn-1c pull-right">Tải lại</button>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- .row -->
     <div id="list_banner" class="row">
-        {% for sub in banner_data %}        
-        <div class="col-sm-3">
+        {% for sub in banner_data %}
+        <div class="col-sm-3" index="{{sub.index}}">
             <div class="white-box">
-                <button onclick="remove_banner(this)" style="float:right" type="button" class="btn btn-warning btn-circle remove-banner"><i class="fa fa-times"></i> </button>
+                <!--<button onclick="remove_banner(this)" style="float:right" type="button" class="btn btn-warning btn-circle remove-banner"><i class="fa fa-times"></i> </button>-->
                 <h3 class="box-title">Mẫu banner</h3>
-                <label for="banner_{{loop.index}}">{{ sub.name }}</label>
-                <input type="file" id="banner_{{loop.index}}" class="dropify"
+                <label for="{{sub.index}}_banner" style="display:none">{{sub.name}}</label>
+                <input type="file" id="{{sub.index}}_banner" class="dropify"
                        data-height="300"
                        data-default-file="{{sub.url}}"
                        data-max-file-size="10M"

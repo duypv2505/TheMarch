@@ -117,12 +117,12 @@
           {% for sub in banner %}
           {% if loop.index == 1 %}
           <div class="item active">
-              <img src="load_banner_image/{{sub.name}}" alt="{{sub.name}}">
+              <img src="{{sub.url}}" alt="{{sub.name}}">
               <div class="carousel-caption">Describe the Image for SEO 1</div>
           </div>
           {% else %}
           <div class="item">
-              <img src="load_banner_image/{{sub.name}}" alt="{{sub.name}}">
+              <img src="{{sub.url}}" alt="{{sub.name}}">
               <div class="carousel-caption">Describe the Image for SEO 1</div>
           </div>
           {% endif %}          
