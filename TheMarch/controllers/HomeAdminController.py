@@ -71,7 +71,7 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Ghi nhớ'.decode('utf-8'))
 
 @app.route('/home_admin')
-@login_required
+#@login_required
 def home_admin():
     return redirect(url_for('banner'))
 
