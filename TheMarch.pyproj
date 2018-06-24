@@ -747,6 +747,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="TheMarch\static\add-event.js" />
     <Content Include="TheMarch\static\AdminTemplate\ampleadmin-dark\bootstrap\CHANGELOG.md" />
     <Content Include="TheMarch\static\AdminTemplate\ampleadmin-dark\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="TheMarch\static\AdminTemplate\ampleadmin-dark\bootstrap\dist\css\bootstrap-theme.css.map" />
@@ -4530,6 +4531,7 @@
     <Content Include="TheMarch\static\scripts\respond.min.js" />
     <Content Include="TheMarch\static\scripts\_references.js" />
     <Content Include="TheMarch\templates\about.html" />
+    <Content Include="TheMarch\templates\Admin\add-event.html" />
     <Content Include="TheMarch\templates\Admin\banner.html" />
     <Content Include="TheMarch\templates\Admin\event.html">
       <SubType>Code</SubType>
@@ -4540,7 +4542,6 @@
     <Content Include="TheMarch\templates\Admin\sidebar.html" />
     <Content Include="TheMarch\templates\contact.html" />
     <Content Include="TheMarch\templates\Home\home.html" />
-    <Content Include="TheMarch\templates\Home\index.html" />
     <Content Include="TheMarch\templates\index.html" />
     <Content Include="TheMarch\templates\layout.html" />
   </ItemGroup>

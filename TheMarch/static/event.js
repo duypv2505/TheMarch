@@ -29,7 +29,8 @@
     function init_datatable(dataSet) {
         var manage_button_html = '<button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5 delete-button"><i class="ti-trash"></i></button>' +
                                  '<button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5 edit-button"><i class="ti-pencil-alt"></i></button>';
-        var add_button_html = '<button id="add_event" class="fcbtn btn btn-info btn-outline btn-1c m-b-0" data-toggle="modal" data-target="#add_event">Thêm sự kiện</button>';
+        //var add_button_html = '<button id="add_event" class="fcbtn btn btn-info btn-outline btn-1c m-b-0" data-toggle="modal" data-target="#add_event">Thêm sự kiện</button>';
+        var add_button_html = '<button id="add_event" class="fcbtn btn btn-info btn-outline btn-1c m-b-0">Thêm sự kiện</button>';
         var table = $('#event_table').DataTable({
             data: dataSet,
             columns: [
@@ -48,7 +49,7 @@
                 },
                 {
                     "targets": 0,
-                    "width": 130,                    
+                    "width": 130,
                 },
                 {
                     "targets": 2,
@@ -74,7 +75,11 @@
         });
 
         $('#event_table_length').append(add_button_html);
+        $('#add_event').on("click", function () {
+            window.location.href = '/admin/add_event';
+        })
     }
-
     get_event_data();
+
+    
 });

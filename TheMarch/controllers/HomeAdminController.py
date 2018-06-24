@@ -70,9 +70,9 @@ class LoginForm(FlaskForm):
                            render_kw={"placeholder": "Mật khẩu".decode('utf-8')})
     remember = BooleanField('Ghi nhớ'.decode('utf-8'))
 
-@app.route('/home_admin')
+@app.route('/admin')
 #@login_required
-def home_admin():
+def admin():
     return redirect(url_for('banner'))
 
 #############
@@ -211,7 +211,7 @@ def delete_banner():
 #############
 # Banner controller
 #############
-@app.route("/banner", methods=['GET'])
+@app.route("/admin/banner", methods=['GET'])
 #@login_required
 def banner():    
     list_banner = common.load_banner_image()
@@ -230,11 +230,22 @@ def refesh_banner():
 #############
 # Event controller
 #############
-@app.route("/event", methods=['GET'])
+@app.route("/admin/event", methods=['GET'])
 #@login_required
 def event():        
     return render_template(
         'Admin/event.html',        
+        year=datetime.now().year,
+    )
+
+#############
+# Event controller
+#############
+@app.route("/admin/add_event", methods=['GET'])
+#@login_required
+def add_event():        
+    return render_template(
+        'Admin/add-event.html',        
         year=datetime.now().year,
     )
 
@@ -258,3 +269,32 @@ def load_event_admin():
                 }                                          
         list_event.append(item)
     return simplejson.dumps({'list_event': list_event})
+
+@app.route("/add_event_db", methods=['POST'])
+#@login_required
+def add_event_db():  
+    try:
+        event_type = request.form['event_type']
+        title = request.form['title']
+        description = request.form['description']
+        short_description = request.form['short_description']
+        created_date = datetime.now()
+        created_date = '{0}/{1}/{2}'.format(created_date.year, created_date.month, created_date.day)
+        created_by = 'admin'
+        is_important = request.form['is_important']
+        new_event = {
+                        "event_type": event_type,
+                        "title": title,
+                        "short_description": short_description,
+                        "description": description,
+                        "is_important": is_important,
+                        "created_date": created_date,
+                        "created_by": created_by
+                    }
+        common.current_db.Event.insert(new_event)   
+        return simplejson.dumps({"result": 'success'}) 
+    except:
+        return simplejson.dumps({"result": 'error'}) 
+
+    
+       

@@ -51,8 +51,8 @@ def about():
         message='Your application description page.'
     )
 
-#@app.route("/thumbnail/<string:filename>", methods=['GET'])
 @app.route('/load_banner_image/<string:filename>', methods=['GET'])
+@app.route('/admin/load_banner_image/<string:filename>', methods=['GET'])
 def load_banner_image(filename):
     return send_from_directory(app.config['BANNER_IMAGE_FOLDER'], filename=filename)
     #return send_from_directory(os.path.join(app.config['BANNER_IMAGE_FOLDER']), filename=filename)
