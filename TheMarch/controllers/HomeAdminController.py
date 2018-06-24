@@ -224,8 +224,7 @@ def banner():
 @app.route("/refesh_banner", methods=['GET'])
 #@login_required
 def refesh_banner():    
-    list_banner = common.load_banner_image()            
-    #return simplejson.dumps({"files": list_banner});
+    list_banner = common.load_banner_image()                
     return simplejson.dumps({'list_banner': list_banner})
 
 #############
@@ -233,10 +232,29 @@ def refesh_banner():
 #############
 @app.route("/event", methods=['GET'])
 #@login_required
-def event():    
-    #list_banner = common.load_banner_image()
+def event():        
     return render_template(
-        'Admin/event.html',
-        #banner_data = list_banner,
+        'Admin/event.html',        
         year=datetime.now().year,
     )
+
+#############
+# Event controller
+#############
+@app.route("/load_event_data", methods=['POST'])
+def load_event_admin():
+    list_event = []
+    #Get list event
+    list_event_db = common.current_db.Event.find().sort("created_on", DESCENDING)
+    for item in list_event_db:                
+        item = {
+                    "event_type": item["event_type"],
+                    "title": item["title"],
+                    "short_description": item["short_description"] ,
+                    "description": item["description"] ,
+                    "created_by": item["created_by"] ,
+                    "created_date": item["created_date"] ,
+                    "is_important": item["is_important"] 
+                }                                          
+        list_event.append(item)
+    return simplejson.dumps({'list_event': list_event})

@@ -3537,6 +3537,9 @@
     <Content Include="TheMarch\static\content\bootstrap.min.css" />
     <Content Include="TheMarch\static\content\site.css" />
     <Content Include="TheMarch\static\css\custom.css" />
+    <Content Include="TheMarch\static\css\event.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="TheMarch\static\css\login.css" />
     <Content Include="TheMarch\static\event.js">
       <SubType>Code</SubType>
