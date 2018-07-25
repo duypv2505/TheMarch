@@ -22,7 +22,7 @@
 
 
     $.ajax({
-        url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
+        url: "http://api.serverapi.host/api/v1/apiv3/CalculateFee", //the page containing python script
         type: "POST", //request type,
         headers: {          
             Accept: "application/json",
