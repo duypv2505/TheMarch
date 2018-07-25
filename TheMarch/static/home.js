@@ -24,9 +24,10 @@
     $.ajax({
         url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
         type: "POST", //request type,
-        headers: {          
+        headers: {            
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            'ClientID': '551481'
         },
         data: data,
         cache: false,
