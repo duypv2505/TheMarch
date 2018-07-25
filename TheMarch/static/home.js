@@ -2,43 +2,32 @@
 
     var data = {
         "token": "5b55dca894c06b03b20109ac",
-        "TokenClient": [
-            "551481"
+        "Weight": 10000,
+        "Length": 10,
+        "Width": 110,
+        "Height": 20,
+        "FromDistrictID": 1443,
+        "ToDistrictID": 1452,
+        "ServiceID": 53319,
+        "OrderCosts": [
+            {
+                "ServiceID": 100022
+            },
+            {
+                "ServiceID": 53337
+            }
         ],
-        "ConfigCod": true,
-        "ConfigReturnData": true,
-        "URLCallback": "https://hook.serverapi.host/realtimelog",
-        "ConfigField": {
-            "CoDAmount": true,
-            "CurrentWarehouseName": true,
-            "CustomerID": true,
-            "CustomerName": true,
-            "CustomerPhone": true,
-            "Note": true,
-            "OrderCode": true,
-            "ServiceName": true,
-            "ShippingOrderCosts": true,
-            "Weight": true,
-            "ExternalCode": true,
-            "ReturnInfo": true
-        },
-        "ConfigStatus": {
-            "Cancel": true,
-            "Delivered": true,
-            "Delivering": true,
-            "Finish": true,
-            "LostOrder": true,
-            "Picking": true,
-            "ReadyToPick": true,
-            "Return": true,
-            "Returned": true,
-            "Storing": true,
-            "WaitingToFinish": true
-        }
+        "InsuranceFee": 1000003
     }
+
+
     $.ajax({
-        url: "https://console.ghn.vn/api/v1/apiv3/SetConfigClient", //the page containing python script
+        url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
         type: "POST", //request type,
+        headers: {          
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
         data: data,
         cache: false,
         processData: false,
