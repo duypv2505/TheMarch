@@ -25,8 +25,6 @@
         url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
         type: "POST", //request type,
         headers: {            
-            Accept: "application/json",
-            "Content-Type": "application/json",
             'Client-ID': '551481'
         },
         data: data,
