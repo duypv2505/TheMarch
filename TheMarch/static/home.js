@@ -26,7 +26,9 @@
         type: "POST", //request type,
         headers: {            
             'Client-ID': '551481',
-            "Authorization": '5b55dca894c06b03b20109ac'
+            "Authorization": '5b55dca894c06b03b20109ac',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         data: data,
         cache: false,
