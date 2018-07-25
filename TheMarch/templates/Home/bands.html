@@ -1,0 +1,39 @@
+{% extends "Home/bands-layout.html" %}
+{% block title %}March Live Music - Ban nhạc{% endblock %}
+{% block content %}
+<section class="body-content ">
+
+    <!--portfolio-->
+    <div class="container padding100">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portfolio portfolio-masonry col-3 gutter">
+                    {% for sub in list_band_menu %}
+                    <div class="portfolio-item cat1 cat3 ">
+                        <div class="thumb">
+                            <a href="/home/home_band_detail/{{sub._id}}">
+                                <img style="object-fit: cover;height:270px" src="{{sub.thumbnail}}" alt="">
+                            </a>
+                            <div class="portfolio-hover">
+                                <div class="action-btn">
+                                    <a href="/home/home_band_detail/{{sub._id}}" class="popup-link" title="lightbox view"></a>
+                                </div>
+                                <div class="portfolio-description">
+                                    <!--<h4><a href="/home/home_band_detail/{{sub._id}}" class="popup-link" title="lightbox view">{{sub.band_name}}</a></h4>-->
+                                    <p><a href="/home/home_band_detail/{{sub._id}}" class="popup-link" title="lightbox view"></a></p>
+                                    <p><a href="/home/home_band_detail/{{sub._id}}">{{sub.band_name}}</a></p>
+                                    <p><a href="/home/home_band_detail/{{sub._id}}">{{sub.band_type_name}}</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--portfolio-->
+
+
+</section>
+{% endblock %}

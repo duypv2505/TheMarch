@@ -1,0 +1,44 @@
+{% extends "Admin/layout.html" %}
+{% block title %}Quản lý hình Phòng tập{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <input type="hidden" id="room_type" value="{{room_type}}"/>
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý hình Phòng tập {{room_type_name}}</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+            <!--<button id="add_banner" class="fcbtn btn btn-info btn-outline btn-1c pull-right">Thêm banner</button>-->
+            <button style="margin-right: 1%;" id="refesh" class="fcbtn btn btn-info btn-outline btn-1c pull-right">Tải lại</button>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- .row -->
+    <div id="list_thumbnail" class="row">
+        {% for sub in music_thumbnail_data %}
+        <div class="col-sm-4" index="{{sub.index}}">
+            <div class="white-box">
+                <form class="form-horizontal" data-toggle="validator">
+                    <h3 class="box-title">Thumbnail thứ {{sub.index}}</h3>
+                </form>
+                <input thumbnail_name="{{sub.thumbnail_name}}" thumbnail_id="{{sub._id}}" type="file" id="{{sub.index}}_band" class="dropify"
+                       data-height="300"
+                       data-default-file="{{sub.thumbnail}}"
+                       data-max-file-size="10M"
+                       data-show-remove="true"
+                       data-allowed-file-extensions="jpg png" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- /.row -->
+    <!-- ============================================================== -->    
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<!-- jQuery file upload -->
+<script src="/static/AdminTemplate/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
+<script src="/static/admin-music-room.js"></script>
+{% endblock %}

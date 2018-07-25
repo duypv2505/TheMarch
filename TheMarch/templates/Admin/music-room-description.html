@@ -1,0 +1,114 @@
+{% extends "Admin/layout.html" %}
+{% block title %}Quản lí Thông tin phòng tập{% endblock %}
+{% block head %}
+{{super()}}
+<link href="/static/css/event.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Thông tin chi tiết của phòng {{room_type_name}}</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- .row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+                <input id="room_id" type="hidden" value="{{room_info._id}}" />
+                <h3 class="box-title m-b-40" style="display: inline-block;">Thông tin mô tả phòng {{room_type_name}}</h3>
+                <form class="form-horizontal" data-toggle="validator">
+                    <div class="form-group">
+                        <label class="col-md-12">Phần mô tả phòng hiển thị trên trang chủ</label>
+                        <div class="col-md-12">
+                            <textarea maxlength="600" class="form-control" id="short_description" rows="10" required>{{room_info.description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Giá phòng (VNĐ)</label>
+                        <div class="col-md-3">
+                            <input type="number" id="price" value="{{room_info.price}}" class="form-control" style="text-align: right;">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 1</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_1" value="{{room_info.option_1}}"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 2</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_2"  value="{{room_info.option_2}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 3</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_3"  value="{{room_info.option_3}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 4</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_4"  value="{{room_info.option_4}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 5</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_5"  value="{{room_info.option_5}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 6</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_6"  value="{{room_info.option_6}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 7</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_7"  value="{{room_info.option_7}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 8</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_8"  value="{{room_info.option_8}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 9</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_9"  value="{{room_info.option_9}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-12" for="title">Option 10</label>
+                        <div class="col-md-12">
+                            <input type="text" id="option_10"  value="{{room_info.option_10}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" style="width: 70px;margin-left: 2%;" class="btn btn-success waves-effect waves-light m-r-10">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.row -->
+    <!-- ============================================================== -->    
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="/static/AdminTemplate/ampleadmin-dark/js/validator.js"></script>
+<!--Style Switcher -->
+<script src="/static/admin-music-room-description.js"></script>
+{% endblock %}
