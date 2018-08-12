@@ -33,8 +33,8 @@
         //data: data,
         //cache: false,
         processData: false,
-        contentType: "text/json",
-        dataType: 'json',
+        contentType:"application/json; charset=utf-8",
+        dataType: "json",
         success: function (result) {            
             console.log(result);
         },
