@@ -34,6 +34,7 @@
         //cache: false,
         processData: false,
         contentType: "text/json",
+        dataType: 'json',
         success: function (result) {            
             console.log(result);
         },
