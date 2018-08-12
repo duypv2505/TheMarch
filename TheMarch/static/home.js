@@ -33,7 +33,7 @@
         //data: data,
         //cache: false,
         processData: false,
-        contentType: false,
+        contentType: "text/json"
         success: function (result) {            
             console.log(result);
         },
