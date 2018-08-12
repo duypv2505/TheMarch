@@ -20,23 +20,22 @@
         "InsuranceFee": 1000003
     }
 
-
+    //url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
     $.ajax({
-        url: "https://console.ghn.vn/api/v1/apiv3/CalculateFee", //the page containing python script
-        type: "POST", //request type,
-        headers: {            
-            'Client-ID': '551481',
-            "Authorization": '5b55dca894c06b03b20109ac',
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        data: data,
-        cache: false,
+        url: "https://thongtindoanhnghiep.co/api/company/3901212654", //the page containing python script
+        type: "GET", //request type,
+        //headers: {            
+        //    'Client-ID': '551481',
+        //    "Authorization": '5b55dca894c06b03b20109ac',
+        //    'Accept': 'application/json',
+        //    'Content-Type': 'application/json'
+        //},
+        //data: data,
+        //cache: false,
         processData: false,
         contentType: false,
-        success: function (result) {
-            show_error('');
-
+        success: function (result) {            
+            console.log(result);
         },
         error: function (result) {
             show_error('');
